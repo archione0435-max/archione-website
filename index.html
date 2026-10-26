@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>주식회사아키원 | 홈페이지 준비 중</title>
+  <meta name="description" content="주식회사아키원(archione)의 홈페이지를 준비하고 있습니다. 빠른 시일 내에 찾아뵙겠습니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="주식회사아키원 | 홈페이지 준비 중">
+  <meta property="og:description" content="주식회사아키원(archione)의 홈페이지를 준비하고 있습니다. 빠른 시일 내에 찾아뵙겠습니다.">
+  <style>
+    /* 색상과 글꼴은 이 부분에서 한 번에 변경할 수 있습니다. */
+    :root {
+      --background: #f6f5f1;
+      --text: #2c302d;
+      --muted: #686d66;
+      --line: #d9dbd3;
+      --accent: #6b765e;
+      --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      background: var(--background);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    ::selection { background: #dce0d3; color: #2c302d; }
+
+    .page {
+      width: min(100%, 1560px);
+      min-height: 100vh;
+      min-height: 100svh;
+      margin-inline: auto;
+      padding: clamp(28px, 4vw, 56px) clamp(24px, 6vw, 96px) 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    /* 로고 이미지가 없어도 보이는 텍스트 워드마크입니다. */
+    .wordmark {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(30px, 3vw, 39px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    .brand-caption {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-block: clamp(60px, 9vh, 112px);
+    }
+
+    .content { min-width: 0; width: 100%; }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 30px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      line-height: 1.5;
+    }
+
+    .status::before {
+      content: "";
+      flex: 0 0 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 4.3vw, 62px);
+      font-weight: 500;
+      line-height: 1.38;
+      letter-spacing: -0.065em;
+    }
+
+    .description {
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 1.15vw, 16px);
+      font-weight: 400;
+      line-height: 1.95;
+      letter-spacing: -0.025em;
+    }
+
+    .greeting {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 42px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .greeting::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      flex: 0 0 32px;
+      background: var(--accent);
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .footer p { margin: 0; }
+
+    .copyright {
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 900px) {
+      h1 { font-size: clamp(32px, 4.4vw, 44px); }
+      .status { margin-bottom: 24px; }
+      .description { font-size: 14px; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 30px 26px 24px; }
+      .brand-caption { margin-top: 10px; font-size: 10px; }
+      .main { padding-block: 64px 36px; }
+      h1 { font-size: clamp(30px, 7.5vw, 46px); line-height: 1.4; }
+      .description { margin-top: 22px; line-height: 1.9; }
+      .greeting { margin-top: 28px; font-size: 11px; }
+      .footer { gap: 7px; padding-top: 18px; font-size: 10px; }
+    }
+
+    @media (max-width: 360px) {
+      .page { padding-inline: 20px; }
+      .main { padding-top: 48px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media print {
+      .page { min-height: auto; }
+      .main { padding-block: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <!-- 공식 로고가 준비되면 이 텍스트를 로고로 바꿀 수 있습니다. -->
+        <p class="wordmark" lang="en">archione</p>
+        <p class="brand-caption">주식회사아키원</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="content" aria-labelledby="page-title">
+        <p class="status" lang="en">COMING SOON</p>
+        <h1 id="page-title">아키원 홈페이지를<br>준비하고 있습니다.</h1>
+        <p class="description">
+          새로운 모습으로 인사드리기 위해<br>
+          홈페이지를 정성껏 준비하고 있습니다.<br>
+          빠른 시일 내에 찾아뵙겠습니다.
+        </p>
+        <p class="greeting">방문해 주셔서 감사합니다.</p>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>주식회사아키원</p>
+      <p class="copyright" lang="en">&copy; archione. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
