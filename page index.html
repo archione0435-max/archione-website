@@ -1,0 +1,1989 @@
+<!-- Archives - 4-Column Grid View -->
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900 pt-[10px]">
+<div class="flex justify-between items-center px-10 py-8 w-full max-w-[1800px] mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12"><a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Work</a><a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">About</a><a class="font-inter text-[11px] uppercase tracking-[0.15em] font-semibold text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-0.5" href="#">Contact &amp; Profile</a></nav>
+<!-- Trailing Action -->
+
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1800px] mx-auto px-10 pt-[160px] pb-[160px]">
+<!-- Page Header -->
+<div class="mb-16"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-neutral-200 dark:border-neutral-800 pb-8"><div class="space-y-2"><p class="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500">Studio Dossier &amp; Inquiries</p><h1 class="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 uppercase">Contact</h1></div><div class="mt-4 md:mt-0 text-left md:text-right"><span class="inline-block px-3 py-1 text-[10px] font-medium tracking-[0.15em] uppercase border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">지명원 / 2024–2025 Edition</span><p class="text-[11px] tracking-wide text-neutral-400 dark:text-neutral-500 mt-2">ARCHIONE Architectural Practice &amp; Spatial Research</p></div></div></div>
+<!-- 4-Column Image Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 w-full pt-4"><div class="lg:col-span-5 space-y-16"><section class="space-y-4"><h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-neutral-100">01 / Studio Ethos</h2><p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 font-light">ARCHIONE is an architectural practice and spatial laboratory committed to rigorous minimalist structure, tectonic clarity, and sensory materiality. We interrogate the interplay between monolithic volume, daylight orientation, and programmatic precision across civic buildings, residential galleries, and corporate pavilions.</p><p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 font-light">공간의 본질과 구축적 절제를 탐구하며, 감각적인 비례와 미니멀한 물성을 바탕으로 지속 가능한 건축적 가치를 구현합니다.</p></section><section class="space-y-6 pt-8 border-t border-neutral-200 dark:border-neutral-800"><h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-neutral-100">02 / Studio Location</h2><div class="space-y-4 text-sm font-light text-neutral-700 dark:text-neutral-300"><div><p class="font-medium text-neutral-900 dark:text-neutral-100">Seoul Headquarters</p><p class="text-neutral-500 dark:text-neutral-400 mt-1">4F, 88 Dosan-daero 45-gil, Gangnam-gu, Seoul, 06021, Republic of Korea</p><p class="text-neutral-500 dark:text-neutral-400 text-xs mt-0.5">서울특별시 강남구 도산대로45길 88 아키원 빌딩 4층</p></div><div class="pt-2"><p class="text-xs text-neutral-400 uppercase tracking-wider">Transit Guide</p><p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Apgujeong Rodeo Station (Suin-Bundang Line, Exit 5) · Walk 6 min<br>Valet parking available at building entrance</p></div></div></section><section class="space-y-6 pt-8 border-t border-neutral-200 dark:border-neutral-800"><h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-neutral-100">03 / Inquiries &amp; Consultation</h2><div class="grid grid-cols-2 gap-4 text-sm font-light"><div><span class="block text-[10px] uppercase tracking-widest text-neutral-400">Telephone</span><span class="font-medium text-neutral-800 dark:text-neutral-200">+82 (0)2 548 7720</span></div><div><span class="block text-[10px] uppercase tracking-widest text-neutral-400">Facsimile</span><span class="font-medium text-neutral-800 dark:text-neutral-200">+82 (0)2 548 7725</span></div><div><span class="block text-[10px] uppercase tracking-widest text-neutral-400">General Email</span><a class="font-medium text-neutral-800 dark:text-neutral-200 hover:underline" href="mailto:info@archione.com">info@archione.com</a></div><div><span class="block text-[10px] uppercase tracking-widest text-neutral-400">Press &amp; Lecture</span><a class="font-medium text-neutral-800 dark:text-neutral-200 hover:underline" href="mailto:press@archione.com">press@archione.com</a></div></div><div class="p-5 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"><p class="text-xs font-semibold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">Project Consultation Notice</p><p class="text-xs text-neutral-500 dark:text-neutral-400 mt-2 leading-relaxed">새로운 프로젝트 기획, 현상설계, 건축/공간 총괄 디렉팅 상담은 사전 예약제로 진행됩니다. 유선 또는 전용 양식을 통해 의뢰서를 접수해 주시면 담당 건축가가 검토 후 회신 드립니다.</p></div></section></div><div class="lg:col-span-7 space-y-12"><section class="space-y-4"><div class="flex items-baseline justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3"><h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-neutral-100">04 / Credentials &amp; Dossier (지명원)</h2><span class="text-[11px] text-neutral-400 font-mono tracking-wider">VER. 2024.11</span></div><p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">아키원건축사사무소의 공식 지명원 문서 세트입니다. 회사개요, 건축사 면허 및 등록증명, 조직 체계, 공공 및 민간 실적증명원(건축, 인테리어, 전시파빌리온), 수상 이력을 공인 형식으로 열람 및 다운로드하실 수 있습니다.</p></section><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="p-6 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-100 transition-colors flex flex-col justify-between space-y-6"><div class="space-y-3"><div class="flex items-center justify-between"><span class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">ARCHIVE DOSSIER</span><span class="text-[10px] bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 text-neutral-600 dark:text-neutral-300 uppercase">PDF · 34.8 MB</span></div><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100">2024–2025 Architectural Practice Portfolio &amp; Dossier</h3><p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed font-light">전체 완공작품 도면 및 상세 사진, 공간철학, 수상연보가 수록된 메인 공식 지명원 도록.</p></div><div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between"><span class="text-[10px] text-neutral-400">Updated 2024.10.15</span><button class="text-[11px] font-medium tracking-wider uppercase flex items-center gap-1.5 text-neutral-900 dark:text-neutral-100 hover:opacity-60 transition-opacity"><span class="material-symbols-outlined text-[15px]">download</span> Download</button></div></div><div class="p-6 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-100 transition-colors flex flex-col justify-between space-y-6"><div class="space-y-3"><div class="flex items-center justify-between"><span class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">CERTIFICATE PACK</span><span class="text-[10px] bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 text-neutral-600 dark:text-neutral-300 uppercase">PDF · 8.4 MB</span></div><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100">Professional Licenses &amp; Registration Certificates</h3><p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed font-light">건축사업무신고필증, 사업자등록증, 대한건축사협회 정회원 증명원, 전문건설업 면허 사본.</p></div><div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between"><span class="text-[10px] text-neutral-400">Certified Copies</span><button class="text-[11px] font-medium tracking-wider uppercase flex items-center gap-1.5 text-neutral-900 dark:text-neutral-100 hover:opacity-60 transition-opacity"><span class="material-symbols-outlined text-[15px]">download</span> Download</button></div></div></div><section class="space-y-4 pt-6"><div class="flex items-baseline justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3"><h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-neutral-100">05 / Representative Track Record (실적 요약)</h2><span class="text-[10px] uppercase tracking-wider text-neutral-400">2020–2024 Selected Works</span></div><div class="overflow-x-auto"><table class="w-full text-left text-xs border-collapse"><thead class="text-[10px] uppercase font-mono tracking-wider text-neutral-400 border-b border-neutral-200 dark:border-neutral-800"><tr><th class="py-2 font-normal">Year</th><th class="py-2 font-normal">Project Name</th><th class="py-2 font-normal">Typology</th><th class="py-2 font-normal">Location</th><th class="py-2 font-normal text-right">Scale / Area</th></tr></thead><tbody class="divide-y divide-neutral-100 dark:divide-neutral-900 font-light text-neutral-700 dark:text-neutral-300"><tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"><td class="py-3 font-mono text-neutral-400">2024</td><td class="py-3 font-medium text-neutral-900 dark:text-neutral-100">Dosan Horizon Pavilion</td><td class="py-3">Cultural / Gallery</td><td class="py-3">Seoul</td><td class="py-3 text-right font-mono">1,820 m²</td></tr><tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"><td class="py-3 font-mono text-neutral-400">2024</td><td class="py-3 font-medium text-neutral-900 dark:text-neutral-100">Aethel Residence Monolith</td><td class="py-3">Private Residential</td><td class="py-3">Pyeongchang</td><td class="py-3 text-right font-mono">680 m²</td></tr><tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"><td class="py-3 font-mono text-neutral-400">2023</td><td class="py-3 font-medium text-neutral-900 dark:text-neutral-100">K-Brutalist Urban Hub</td><td class="py-3">Commercial HQ</td><td class="py-3">Seongsu</td><td class="py-3 text-right font-mono">4,450 m²</td></tr><tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"><td class="py-3 font-mono text-neutral-400">2023</td><td class="py-3 font-medium text-neutral-900 dark:text-neutral-100">Nordic Light Housing Gallery</td><td class="py-3">Exhibition Center</td><td class="py-3">Pangyo</td><td class="py-3 text-right font-mono">2,100 m²</td></tr><tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"><td class="py-3 font-mono text-neutral-400">2022</td><td class="py-3 font-medium text-neutral-900 dark:text-neutral-100">Void &amp; Granite Heritage Archive</td><td class="py-3">Civic Museum</td><td class="py-3">Gangneung</td><td class="py-3 text-right font-mono">3,920 m²</td></tr></tbody></table></div></section><div class="p-6 border border-dashed border-neutral-300 dark:border-neutral-700 bg-neutral-50/50 dark:bg-neutral-900/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"><div class="space-y-1"><p class="text-xs font-semibold text-neutral-900 dark:text-neutral-100">Request Full Project Dossier or RFP Package</p><p class="text-xs text-neutral-500 dark:text-neutral-400 font-light">발주처 사전 자격심사(PQ)용 맞춤형 지명원 및 세부 견적 포트폴리오를 별도로 송부해 드립니다.</p></div><a class="px-4 py-2 text-xs font-medium uppercase tracking-wider bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 hover:opacity-80 transition-opacity whitespace-nowrap" href="mailto:project@archione.com?subject=RFP%20Request%20-%20ARCHIONE">Request Dossier</a></div></div></div>
+</main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900 opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-[1800px] mx-auto">
+<!-- Copyright -->
+
+<!-- Footer Links -->
+<div class="flex space-x-8"><span class="text-[10px] text-neutral-400 uppercase tracking-widest font-mono">Mon–Fri 09:30–18:30 KST</span><span class="text-[10px] text-neutral-400 font-mono">© 2025 ARCHIONE Architects. All rights reserved.</span></div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
+
+<!-- ABOUT — Company & Official Dossier -->
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  body, input, textarea, select, button, .font-sans, .font-body-lg {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+    letter-spacing: -0.02em;
+  }
+  .font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+<meta content="web_standard" name="shell-type"></head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900 pt-[10px]">
+<div class="flex justify-between items-center px-10 py-8 w-full max-w-[1800px] mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-bold text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-1 inline-block transition-opacity duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Action -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1800px] mx-auto px-10 pt-[160px] pb-[160px]"><div class="flex flex-col w-full">
+<!-- Quick Jump Anchors Bar -->
+<div class="w-full bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 py-4 px-10 mb-16 overflow-x-auto">
+<div class="max-w-[2560px] mx-auto flex items-center justify-between text-xs tracking-[0.2em] uppercase font-mono text-neutral-500">
+<div class="flex items-center space-x-12 whitespace-nowrap">
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#overview">01 / Overview &amp; Ethos</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#ceo">02 / CEO Message</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#history">03 / Track Record</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#certificates">04 / Certificates</a>
+
+</div>
+
+</div>
+</div>
+<!-- Main Dossier Content Container (Ultra-wide 2560px max width constraint) -->
+<div class="w-full max-w-[2560px] mx-auto px-10 flex flex-col space-y-[160px]">
+<!-- SECTION 01 / STUDIO ETHOS & OVERVIEW -->
+<section class="flex flex-col w-full pt-10" id="overview">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">01 / Overview</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Philosophy Text Column -->
+<div class="lg:col-span-7 flex flex-col space-y-8">
+<h1 class="text-4xl lg:text-6xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 leading-[1.15]">"We make better space!"</h1>
+<div class="space-y-6 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
+<p class="">각 분야의 전문가들이 만들어내는 완벽한 조화의 크리에이티브 시너지</p><div class="">각자의 전문분야에서 쌓아온 노하우와</div><div class="">다른 분야에 대한 공감대가 빚어내는 아키원만의 크리에이티브 시너지</div><p class=""></p>
+
+</div>
+<!-- 4 Core Trust Metrics Bento Row -->
+
+</div>
+<!-- Corporate Ledger Table Column -->
+<div class="lg:col-span-5 bg-neutral-50 dark:bg-neutral-900 p-10 rounded-2xl flex flex-col space-y-6">
+
+<div class="space-y-4 text-sm font-mono">
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Legal Name</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">ARCHIONE Corp. (주식회사 아키원)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Representative CEO</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">Gwi deok, Kim (김귀덕)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Establishment Date</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">March 31, 2008</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Official Licenses</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium text-right">실내건축공사업 11,585,506천원 (2026년 기준)<br>금속창호공사업 1,068,406천원 (2026년 기준)</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-neutral-400">Headquarters</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium text-right">전남광주 북구 첨단과기로 208번길 43-22.<br>와이어스파크 A동 901호</span>
+</div>
+</div>
+<div class="pt-4">
+<div class="w-full h-48 bg-cover bg-center rounded-lg grayscale contrast-125" data-alt="Minimalist architectural office interior in Gangnam Seoul featuring exposed concrete walls, large format glass tables, architectural models under precision spotlight, and quiet sophisticated atmosphere." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC-8A0GgPAxC1QFZSa9Yb1wFMdhJ2PUFOcqfJoE54FR5apBw6K_Kqie3zfyQ9Uki6MT0pilbaTBFzCqxYc7pdO5rE5qcdrCZh4UDkiM_9kLCLfjMmpcK-K2Pr3tnwu68buFT3gJfBwTfbuBMNo-tqaq7FSoMVcP7eMKmuT9hhKf_7T8CVHF3KU9Xt5Ok-q6DeO8dDGBtCAwE0UbGDFY8aB3g3G8BSLdipgBo95Y2J3n0LJ1RABPyzxj&quot;);"></div>
+</div>
+</div>
+</div><div class="mt-16 pt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col space-y-12"><div class="flex flex-col md:flex-row md:items-end justify-between gap-4"><div><span class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 block mb-1">Organization &amp; Practice Hierarchy</span><h2 class="text-2xl lg:text-3xl font-light tracking-tight text-neutral-900 dark:text-neutral-100">조직도 (Organization Structure)</h2></div></div><div class="flex flex-col items-center w-full max-w-5xl mx-auto space-y-4"><div class="px-8 py-3 rounded-full border border-neutral-900 dark:border-neutral-100 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-center shadow-sm"><span class="text-xs font-mono tracking-[0.2em] uppercase block opacity-70">Top Leadership</span><span class="text-sm font-semibold tracking-wide">대표이사 (CEO)</span></div><div class="w-[1px] h-6 bg-neutral-300 dark:bg-neutral-700"></div><div class="px-8 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 text-center"><span class="text-xs font-mono tracking-[0.15em] uppercase block text-neutral-400">Executive Board</span><span class="text-sm font-medium">임원 (Executives)</span></div><div class="w-[1px] h-8 bg-neutral-300 dark:bg-neutral-700"></div><div class="w-full grid grid-cols-1 md:grid-cols-5 gap-4 pt-2"><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 01</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">기술부</h3><span class="text-[11px] font-mono text-neutral-400">Engineering &amp; Tech</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">공사 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">안전 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">자재 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">디스플레이</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">SIGN</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 02</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">관리부</h3><span class="text-[11px] font-mono text-neutral-400">Administration</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">인사 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">자금 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">총무 관리</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 03</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">공무부</h3><span class="text-[11px] font-mono text-neutral-400">Operations</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">견적 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">계약 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">업체 관리</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 04</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">공사부</h3><span class="text-[11px] font-mono text-neutral-400">Construction</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">시공</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">A / S</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 05</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">설계부</h3><span class="text-[11px] font-mono text-neutral-400">Design Studio</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">디자인 기획</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">기본 설계</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">실시 설계</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">준공 설계</span></li></ul></div></div></div></div>
+</section>
+<!-- SECTION 02 / CEO MESSAGE -->
+<section class="flex flex-col w-full" id="ceo">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">02 / Leadership</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="bg-neutral-50 dark:bg-neutral-900 p-12 lg:p-20 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative overflow-hidden"><div class="lg:col-span-5 space-y-6 flex flex-col justify-between h-full">
+  <div class="space-y-6">
+    <span class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 block">CEO Message</span>
+    <h2 class="text-3xl lg:text-5xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 leading-[1.2]">
+      "Innovation is Every Detail.<br>Value in Every Space."
+    </h2>
+  </div>
+</div>
+<div class="lg:col-span-7 flex flex-col justify-between space-y-8 text-neutral-600 dark:text-neutral-400 text-base lg:text-lg leading-relaxed relative">
+  <div class="space-y-6">
+    <p class="font-medium text-neutral-900 dark:text-neutral-100">
+      주식회사 아키원을 찾아주셔서 진심으로 감사 드립니다.
+    </p>
+    <p class="leading-relaxed">
+      저희 주식회사 아키원은 끊임 없는 기술에 대한 고민과 투자를 통해 환경 친화적인 기술력을 발휘하고 아이디어를 발굴하여 최고의 품질과 서비스로 더 높은 건설가치, 더 높은 고객가치를 무엇보다 중시합니다.
+    </p>
+    <p class="leading-relaxed">
+      축적된 경험과 노하우를 바탕으로 신뢰 받는 건설기업이 되고자 최선을 다할 것이며, 진취적이고 창의적인 자세로 더 나은 삶의 가치를 추구하는 건설산업을 이루고자 노력하고 또 노력 하겠습니다.
+    </p>
+    <div class="space-y-2 pt-2">
+      <p class="">많은 성원 부탁 드립니다.</p>
+      <p class="">감사합니다.</p>
+    </div>
+  </div>
+  <div class="pt-8 flex justify-end items-center border-t border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="text-right flex items-center space-x-4">
+      
+      <span class="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-100 uppercase">CEO KIM GWI DEOK</span>
+    </div>
+  </div>
+</div></div>
+</section>
+<!-- SECTION 03 / FORTELINE HISTORY -->
+<section class="flex flex-col w-full" id="history"><div class="flex items-center space-x-4 mb-8"><span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">03 / Track Record</span><div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div></div><div class="mb-8"><h2 class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-2">연간 공사 실적 (Annual Construction Performance)</h2><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-neutral-400 font-mono gap-2"><span class="">2022 — 2026 주요 관공서 및 대형 건설사 협력 시공·설계 실적 총괄</span><div class="flex items-center space-x-4"><span class="inline-flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-neutral-900 dark:bg-neutral-100"></span><span class="">진행중 (In Progress)</span></span><span class="inline-flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full border border-neutral-400"></span><span class="">준공 (Completed)</span></span></div></div></div><div class="w-full bg-white dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800/60 rounded-xl overflow-hidden"><div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead class="border-b border-neutral-200 dark:border-neutral-800 text-[11px] font-mono tracking-wider text-neutral-400 uppercase bg-neutral-50/50 dark:bg-neutral-900/50"><tr><th class="py-3.5 px-6 font-medium w-36">연도 (YEAR)</th><th class="py-3.5 px-6 font-medium">발주처 및 현장명 (CLIENT &amp; PROJECT TITLE)</th><th class="py-3.5 px-6 font-medium text-right w-52">공사금액 (CONTRACT VALUE)</th><th class="py-3.5 px-6 font-medium text-center w-36">진행상황 (STATUS)</th></tr></thead><tbody class="divide-y divide-neutral-200/60 dark:divide-neutral-800/60 text-xs font-mono"><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="7"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2026</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">7 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">태영종합건설-정석 제2공장 대회의장 무대장치 &amp; 강당조성공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,014,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-과천주암C-2BL 공동주택 건설공사 2공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩10,980,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광주시광산구-산정근린공원 안전하고 쾌적한 화장실 개선사업</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩63,432,200</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-용인고림지구 H5블럭 공동주택 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩999,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-남양주왕숙 A-1BL 아파트 건설공사 1공구 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,590,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-율포 해양복합센터 건립 건축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,180,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">울산다운 2 A-10BL 아파트 건설공사 8공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,700,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="6"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2025</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">6 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">LH토지주택공사-2024년 작은도서관 시설물 개선공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩182,316,460</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설-순천시신청사 내장공사 및 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,239,844,216</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우 부산진구 견본주택 리모델링 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩152,900,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-마륵동 연화지역주택조합 아파트 내장공사 및 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,305,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">의정부동 지역주택조합 모델하우스 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,597,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">의정부동 지역주택조합 아파트 단위세대 설계용역</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩59,840,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="12"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2024</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">11 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">인동종합건설- 인공지능 중심 산업융합 집적단지 공간건축 신축공사(잔여분) 중 실내건축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,861,716,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">영무건설-군산 커뮤니티 인테리어 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩480,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우종합건설-괴산 미니복합타운 A-1BL 및 진천문백 아파트 건설공사 1공구 공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,628,098,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 과천지식정보타운 아파트 건설공사 1공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,366,800,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">용인 동천역 트리너스 아파트 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,002,652,700</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광주시도시공사-인공지능 DS동 부분준공 수장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩291,948,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설 –전남대 생활관 중 내장,목창호공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩109,839,073</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설-전남대 생활관 내장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,034,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-세종시 5-1생활권 L12BL 견본주택 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,882,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광문개발-천안두정동 1281번지 양우모델하우스 리모델링공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,314,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-여수 신기동39번지 단위세대 설계용역</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩24,200,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-내포신도시 RH4-2블록 공동주택 신축공사 중 경량천정공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩295,020,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="6"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2023</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">6 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">도원건설 -순천신대도서관 건립사업 중 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩678,150,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">현용홀딩스 -광천동 주상복합 모델하우스 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,956,900,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">동광건설-죽전 테라스앤 139 동광뷰 웰 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩4,496,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-21-육-○○부대 시설공사 중 내장 및 수장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,308,934,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-태백장성 아파트 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,008,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-태백장성 SOC 복합시설 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,341,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="9"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2022</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">9 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설- 용인고림 양우내안애 아파트 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,247,400,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-파주연풍리 지역주택조합 양우내안애 아파트 신축 중 내장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,049,358,890</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">한국토지주택공사-LH 평택 고덕 견본주택 개보수공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩510,527,230</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대방건설 광주 수완7차 모델하우스 축조공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩809,196,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 완주이서 지역주택조합 공동주택 신축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,766,049,320</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">서영대학교 사회맞춤형사업 파티시에마스터반 실습실 여건개선공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩49,316,630</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대한법률구조공단 광주 지부 피해자 국선전담변호사 사무실 구축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩16,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 천안 두정동 1465번지 공동주택 모델하우스 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,730,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">연산홀딩스-거제시 사동면 성포리 견복주택 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩506,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr></tbody></table></div></div></section>
+<!-- SECTION 04 / CERTIFICATES & OFFICIAL LICENSES (A4 Dossier Viewer) -->
+<section class="flex flex-col w-full" id="certificates">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">04 / Credentials</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+<div>
+<h2 class="text-3xl lg:text-4xl font-light tracking-tight text-neutral-900 dark:text-neutral-100">
+                        Certificates &amp; Official Licenses
+                    </h2>
+<p class="text-neutral-500 text-base mt-2">Verified government and institutional accreditations (A4 Vertical Standard)</p>
+</div>
+<div class="mt-4 md:mt-0 font-mono text-xs text-neutral-400">
+                    TOTAL 6 VERIFIED DOCUMENTS / 2024 REVISION
+                </div>
+</div>
+<!-- A4 Card Grid (Aspect ratio ~ 1:1.414) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Certificate 1 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. 2014-0415</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<!-- A4 Box Representation -->
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">architecture</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">CERTIFICATE OF REGISTRATION</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Interior Architecture Construction License (실내건축공사업 면허)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">MINISTRY OF LAND, INFRASTRUCTURE AND TRANSPORT</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Interior Architecture Construction License</h3>
+<p class="text-sm text-neutral-500">Official license for executing high-end commercial and public interior structures.</p>
+</div>
+</div>
+<!-- Certificate 2 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. SEOUL-2016-089</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">domain</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">PRACTICE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Architectural Practice Registration Certificate (건축사사무소 개설신고필증)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA INSTITUTE OF ARCHITECTS</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Architectural Practice Registration</h3>
+<p class="text-sm text-neutral-500">Certified architectural design and supervision practicing entity.</p>
+</div>
+</div>
+<!-- Certificate 3 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. 2020-11024</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">science</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">R&amp;D INSTITUTE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Corporate Research Institute (기업부설연구소 인정서)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA INDUSTRIAL TECHNOLOGY ASSOCIATION</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">R&amp;D Corporate Research Institute</h3>
+<p class="text-sm text-neutral-500">Accredited research lab for sustainable spatial materials and technology.</p>
+</div>
+</div>
+<!-- Certificate 4 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">ISO 9001 / 14001</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">QUALITY &amp; ENVIRONMENT</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">ISO 9001 &amp; ISO 14001 Certification (품질 및 환경경영시스템)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">INTERNATIONAL ORGANIZATION FOR STANDARDIZATION</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">ISO 9001 / ISO 14001 Quality</h3>
+<p class="text-sm text-neutral-500">Global standard for quality management and environmental responsibility.</p>
+</div>
+</div>
+<!-- Certificate 5 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">CREDIT RATING: A0</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">trending_up</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">CREDIT RATING CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Corporate Credit Rating (기업신용평가등급 A0)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA ENTERPRISE DATA</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Corporate Credit Rating (A0)</h3>
+<p class="text-sm text-neutral-500">High financial stability and operational trustworthiness verified annually.</p>
+</div>
+</div>
+<!-- Certificate 6 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">SYNDICATE NO. 884-2024</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">shield</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">GUARANTEE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Construction Guarantee Syndicate (건설공제조합 시공보증서)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA CONSTRUCTION GUARANTEE CO.</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Construction Guarantee Syndicate</h3>
+<p class="text-sm text-neutral-500">Guaranteed completion and bonding capacity for institutional projects.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05 / OFFICIAL DOSSIER DOWNLOAD & RFP -->
+
+</div>
+</div></main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900 opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-[1800px] mx-auto">
+<!-- Copyright -->
+<!-- Footer Links -->
+<div class="flex space-x-8">
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
+
+<!-- Archives - 4-Column Grid View -->
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900 pt-[10px]">
+<div class="flex justify-between items-center px-10 py-8 w-full max-w-[1800px] mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-1" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">ABOUT</a>
+
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Action -->
+
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1800px] mx-auto px-10 pt-[160px] pb-[160px]">
+<!-- Page Header -->
+<div class="mb-16">
+<h1 class="font-display-xl text-display-xl text-primary">WORK </h1>
+</div>
+<!-- 4-Column Image Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full"><!-- Grid Item 1 -->
+<a href="#uijeongbu-gallery" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="의정부시 의정부동 M/H 축조공사" aria-label="의정부시 의정부동 M/H 축조공사"><img alt="의정부시 의정부동 M/H 축조공사 Entrance" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAqoiVWI3idtE08zJ71-hR1yauvtXBGw_2kyk9aSZYlKnsNeDntHYACyzXcCSbkVaRN9bXOlSMB-wQ__7iIo_InyMkPIQ5P_BH-RSPYHpCHpiky-1p_cwDEEEqNk24A5Piu4DGMkonyVHrT7FF5C-1_mEbN2m_KOEmpAIpR51wkvKUdUpgmbbK8agfaGw_BQMPInj_Mc_ZqCmJPRAG3OAoGH_8hK-q-hTVUqgKDwG1xdoXDZaAukffrQEJF8-l_rQ3dg"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">의정부시 의정부동 M/H 축조공사</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">01 / GALLERY / 2024</span></div></a>
+<!-- Grid Item 2 -->
+<a href="#sejong-aspen" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="세종시 5-1생활권 L12BL M/H" aria-label="세종시 5-1생활권 L12BL M/H"><img alt="세종시 5-1생활권 L12BL M/H ASPEN Hall" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEGAtjsOeRgbJ2XSxT_VkVZqIxyNKNisXrsdAOdxF5LN5vNDkgtw0ICkKnj5pWD5WUr5c_vivL_J8IXoCUs6AxrsR4C3uzMTHR4Xd1qAtnP2yvM8EHIQLNpmFKmQhfmrRFLN8VT_4AGYFi8oqxn-I9wdWobURCwcz50WJtqT5yrzKG2qb2Vc_7rHENp_BMVO1ggGc65InQY2blPTB8qIYdZJMNVX9wEKOz9sm-mVtq32NWuOYceIZ06SC-hzf3XDesQ"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">세종시 5-1생활권 L12BL M/H</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">02 / ASPEN GALLERY / 2024</span></div></a>
+<!-- Grid Item 3 -->
+<a href="#cheonan-dujeong" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="천안 두정동 M/H 축조공사" aria-label="천안 두정동 M/H 축조공사"><img alt="천안 두정동 M/H 축조공사" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt9EQofsAI9nE2dwkA1caGr0p62vgJQRU9PBo6NZpJcyn8pSQ9OmS8BsFF9lw-Hi9q7foYRfpXS_AfNWmKe1_5rf6Y_0gPdMiAGrSdZHyfO5AaIknBGSjUroiLb0Ly8ydTWQ9yppJ2rxkSWSyjrrj7gJZ2M9Tp44QXgF4zbzt-3KcMRi6wizcw0UdiZf9tDHzIoFz_5l-e3l5eEVVzHtaNTXCMxBx5pSLTI6n5lxnLnoGd8EpqECOHDinIf2IMjvGarA"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">천안 두정동 M/H 축조공사</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">03 / GALLERY / 2024</span></div></a>
+<!-- Grid Item 4 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 4" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Close up of brutalist concrete building facade showing grid patterns and raw texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 04</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Structure / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 5 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 5" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Looking up at modern glass skyscrapers converging against a clear, pale sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 05</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Urban / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 6 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 6" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist still life of a single white ceramic vase on a smooth grey surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 06</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Objects / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 7 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 7" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Interior shot of a minimalist gallery space with bare white walls and polished concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 07</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Gallery / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 8 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 8" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Abstract architectural detail of white intersecting planes bathed in stark sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 08</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Form &amp; Space / 2023</span>
+  </div>
+</div><!-- Grid Item 9 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 9" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark stone pavilion amidst serene landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 09</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Residence / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 10 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 10" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic concrete staircase bathed in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 10</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Commercial / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 11 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 11" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Geometric timber facade detail creating deep rhythmic shadow patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 11</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Cultural / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 12 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 12" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist reflection pool beside a polished graphite wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 12</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Pavilion / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 13 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 13" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dark textured steel facade framing an open courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 13</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Civic / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 14 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 14" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monochromatic industrial conversion gallery interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 14</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Exhibition / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 15 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 15" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Atmospheric skylight casting diagonal beam across polished floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 15</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Museum / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 16 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 16" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark ceramic craft elements on charcoal plinth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 16</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Objects / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 17 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 17" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="High-contrast linear concrete canopy overhang" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 17</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Urban / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 18 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 18" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dramatic architectural void with soft ambient daylighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 18</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Spatial / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 19 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 19" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic stone block in modern art foundation gallery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 19</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Sculpture / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 20 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 20" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Sleek glass atrium reflecting geometric architectural angles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 20</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Atrium / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 21 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 21" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dark textured timber wall with minimalist brass accent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 21</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Interior / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 22 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 22" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Brutalist concrete monolith against twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 22</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Tower / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 23 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 23" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist living quarters overlooking calm lake waters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 23</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Residence / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 24 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 24" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monochrome stone colonnade with rhythmic natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 24</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Colonnade / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 25 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 25" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Contemporary museum wing with textured stone facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 25</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Museum / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 26 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 26" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Sculptural monolithic reception desk in polished granite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 26</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Workplace / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 27 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 27" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist glass corner overlooking misty mountain peak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 27</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Retreat / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 28 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 28" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Textured acoustic paneling grid in modern concert hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 28</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Acoustics / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 29 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 29" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic concrete bench in shadow garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 29</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Landscape / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 30 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 30" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Cantilevered roof structure casting geometric shadow on courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 30</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Structure / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 31 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 31" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Subtle light filtering through fluted glass partition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 31</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Interior / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 32 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 32" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark bronze architectural detail bathed in low grazing light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 32</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Detail / 2021</span>
+  </div>
+</div></div>
+</main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900 opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-[1800px] mx-auto">
+<!-- Copyright -->
+
+<!-- Footer Links -->
+<div class="flex space-x-8">
+
+
+
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
+
+<!-- Creative Portfolio - Refined Hero Alignment -->
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Architectural Studio - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "outline": "#7e7576",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-container": "#626263",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000000",
+                        "on-background": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "background": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#e2e2e2",
+                        "on-primary-container": "#848484",
+                        "inverse-primary": "#c6c6c6",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#838484",
+                        "surface": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dadada",
+                        "secondary-container": "#e1dfdf",
+                        "on-surface-variant": "#4c4546",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "secondary": "#5e5e5e",
+                        "primary-container": "#1b1b1b",
+                        "secondary-fixed": "#e4e2e2",
+                        "outline-variant": "#cfc4c5",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "tertiary": "#000000",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "element-gap": "12px",
+                        "edge-margin": "64px",
+                        "container-max": "1800px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-primary text-on-tertiary font-body-lg antialiased selection:bg-on-tertiary selection:text-primary overflow-x-hidden" style="min-height: 1440px; width: 100%; max-width: 2560px; margin: 0px auto;">
+<main class="relative min-h-screen flex flex-col w-full" style="min-height: 1440px; height: 1440px; width: 100%; max-width: 2560px;">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="Stark monochromatic architectural photograph featuring brutalist concrete structures intersecting with sharp diagonal shadows cast by harsh sunlight, embodying strict minimalist aesthetics." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAKen6huL-SMdM15fECr10Lnv6B5mj5-3FRl8suoBH4i5Af0U8_r_khC21dzzcwxcQvxj5FeL8VJSojJyd7_YbFqDOqqytjaDOVC7cBkzoMDcTzSZjqjW5DokiZYLQ7nPyFKDhnogVDONzNj1RbisDBhXzkyLWqPSiLv0gfFp_PExDJSnl1ZeMG-OUWFNV66xs1H3ZsJ0fDCF7vIG8obwnspdvujuEIGoUPj0xT8ch-9WUUKeHxtWtvfv1EJkX9W_JKl9VHFT4b0-M&quot;);"></div>
+<!-- Gradient/Dark overlay to ensure text legibility -->
+<div class="absolute inset-0 bg-primary/40"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="relative z-10 w-full top-0 flex justify-between items-center pb-6 transition-colors duration-150 max-w-container-max mx-auto px-[10px] pt-[10px] text-white" style="max-width: 2560px; padding-left: 48px; padding-right: 48px; padding-top: 24px;">
+<div class="font-semibold tracking-tight text-[20px]">ARCHIONE</div>
+<div class="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 gap-6">
+<a class="font-label-caps text-label-caps transition-opacity duration-150 text-[12px] border-white pb-1 hover:opacity-70" href="{{DATA:SCREEN:SCREEN_11}}" onclick="window.location.href='{{DATA:SCREEN:SCREEN_11}}'; return true;">WORK</a>
+<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity duration-150 text-[12px]" href="#">ABOUT</a>
+
+<a class="font-label-caps text-label-caps hover:opacity-70 transition-opacity duration-150 text-[12px]" href="#">CONTACT</a>
+</div>
+
+</nav>
+<!-- Hero Content Container -->
+<section class="relative z-10 flex flex-col justify-center max-w-container-max mx-auto w-full px-[10px]" style="margin-top: 160px; max-width: 2560px; padding-left: 48px; padding-right: 48px;">
+<!-- Utilizing section-gap equivalent spacing for layout rhythm -->
+<div class="max-w-[800px]">
+
+<div class="mt-8">
+
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 right-0 z-20 flex justify-between items-center w-full px-[10px] pb-[10px] pt-8 max-w-container-max mx-auto uppercase text-white" style="max-width: 2560px; padding-left: 48px; padding-right: 48px; padding-bottom: 24px;">
+
+<div class="flex gap-6">
+
+
+
+</div>
+</footer></main>
+
+
+
+
+
+
+
+
+
+
+</body></html>
+
+<!-- 상세페이지 3 - 이미지 교체 (2560px) -->
+<!DOCTYPE html><html class="light stitch-anim-fade-in" lang="en" style="width: 2560px; min-width: 2560px; max-width: 2560px;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white" style="width: 2560px; min-width: 2560px; max-width: 2560px; margin: 0px auto; overflow-x: hidden;">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900" style="width: 2560px; max-width: 2560px;">
+<div class="flex justify-between items-center px-8 lg:px-16 py-6 lg:py-8 w-full max-w-[2560px] mx-auto" style="width: 100%; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-0.5" href="#archive-grid">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+</div>
+</header>
+<!-- Main Content - Variant 1: Asymmetric Split Editorial Layout -->
+<main class="flex-grow w-full max-w-[2560px] mx-auto px-8 lg:px-16 pt-[120px] lg:pt-[150px] pb-[100px] flex flex-col" style="width: 2560px; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Subheader Bar / Filter Controls -->
+<div class="w-full flex flex-wrap items-baseline justify-between border-neutral-200 dark:border-neutral-800 pb-5 mb-10 gap-4"><div class="flex items-center space-x-8"><a class="font-inter text-xs tracking-wider uppercase text-neutral-900 dark:text-neutral-100 font-medium hover:opacity-70 transition-opacity flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[16px]">arrow_back</span> ALL PROJECTS (08)</a></div></div>
+<!-- Asymmetric Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 flex-grow items-start" style="display: grid; grid-template-columns: 20% 80%; gap: 3.5rem;">
+<!-- Left Column: Pure Text & Architectural Documentation (Sticky) -->
+<div class="lg:col-span-5 lg:sticky lg:top-[120px] flex flex-col lg:border-b-0 border-neutral-200 dark:border-neutral-800 pb-12 lg:pb-8 self-start" style="grid-column: span 1 / span 1; width: 100%;">
+<!-- Project Specifications & Metadata -->
+<div class="border-t border-neutral-200 dark:border-neutral-800 pt-8 space-y-6 w-full">
+<div class="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-neutral-400">
+</div>
+<div>
+<div class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-1">천안 두정동 M/H</div>
+<div class="text-xs text-neutral-400 font-mono tracking-wider">Uijeongbu-dong — Completed 2026</div>
+</div>
+<p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Positioned adjacent to the historic garden canal, the pavilion introduces an unadorned concrete volume interrupted only by calibrated apertures that admit indirect reflected light across micro-textured mortar finishes.
+      </p>
+<div class="grid grid-cols-2 gap-4 border-t border-neutral-100 dark:border-neutral-800/80 pt-5 text-[11px]">
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">building use</span>
+<span class="text-neutral-800 dark:text-neutral-200">Model house</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">Built Area</span>
+<span class="text-neutral-800 dark:text-neutral-200">480 m² / Sub-grade Archive</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">design team</span>
+<span class="text-neutral-800 dark:text-neutral-200">S. Taniguchi Atelier</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">contractor</span>
+<span class="text-neutral-800 dark:text-neutral-200">Hiroshi Ueda</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pure Architectural Photo Stream -->
+<div class="lg:col-span-7 flex flex-col space-y-16" style="grid-column: span 1 / span 1; width: 100%;"><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Pelistar Tower exterior elevation dusk view" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgtbdc8c5c8VN-MpxgSe1uZ-Qck1motLqdIRsV13cy4AJWjjVrkxBoxlinG4y74haUBr6clAA13gEiQybkwcVoYb4-kzaEpxa4HSOFbkHjqR1QeFn2YMlSYnHq1Hh5qjttx1R3PHeK4YADtaMTIec52gUEi6dlXtCjYwqZp10rPekVvczBG02qRPeMKyQwb0ghYo397IygkoAGqCPHIUQOm53fhQ2om5f53jD3gU7HVrpMGdK8lXmO4HVMhY-4g_Fz1w"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Pelistar Tower facade at night street perspective" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsRhR0TvxxvJU27f511YL9d4Tp8y88PKr91sbdWCVrw37sYfubi8anbKCSE0Jy0yymroSSoNfyzDs0NWT7jAjt60SdD_JU_7Dl-_6QevbcVbQbzAHYKENwo-d-WNiOeR7vO0J1EUm99FLdCwZ49AgQWjD3abJzGQY4HAXL8g-v8-g6fIZxT3HCenxHfSwmXuLXHAeduhoYf2TN8cm3QzAJLSCIy8RiRD2_LLqeaGI0PHYBjUVNaBnFUtGNbMpz09v42A"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Station interior display lounge and partition wall" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFmNEzmHaD8vdpJdNrxcapjJdbvt1rs_DaEdZczAxhSs25fkD3NLUzhxRM0bTXbx01n_G3i0sA3ALPkNRPkZFrV72fFaL3LUySCbvLwiIGy43pxn9J4i0t3wQ88wkCXHebCLTfDX42T6_aExoRSAZ-etJgPME67IuvLfoXAlSprnsA_ygJBjZ5yPeSLfl7dKe4sXsnRrKmrLYTr-eV0iSCc4O6Y0suHZ408zE2bJBqg7ZRV9eQwxLN8Jsu9HIwcKwDWg"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Cafeteria counter and minimalist display shelf" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDozHQ7GOCeRox3_OPC4eeSulnR5oNcx5RGO3MnivXa1oX_5-B91Y2QXIGxSDmJmYWRezYhyqSFIVed_a986xi801fpPxojt4y_mMVTKpUOppUnkeRqwkDtthyiMvkltiewLgqMSr4aK3sIiBdFWE8ScAPCaKfGZBxRh1LvpkoRYaBtqcuXh3yAd-hWMNsV_UbRdIBmOav2F4hLIoQ9iXwuFSL2AVrUoNiRhahhwGeGSXgNRav-ndQW2XWIcsmZYtVCiA"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Interior bench planter landscape and consultation area" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU0v6WVsny04Iila46ZUprJTjtih2_CZlYzDzNULESDoyLIKRxOiFcMlgJ0e3QeMgVE8zBkZ1ZKalwV6dFWoikY8zmrbOnklEhZwZ_R_pl9-ZS2VmLgaHwuoJAwHNB_nCBgnfGcswzJowdx_VmFXRta7UT_elnOSupK3Qib6q9lQud2IQKIjx1VAgYo2wlhD1e_9p3K4ZubJ0IHYI0BEe3-b9g7daU0o9vv06bHaOgUfAHIwh9BHquaaE4qat67rvK3A"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Curved architectural corridor with glass vitrine garden" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKOc4V4RJsGHyLpeqwOCIQBiAYsUMAbTAyBLkaaoe-gaxvD4pG8psTbkLXrWu9Iu6QVqEB3HK7pbKRUwLP-0dbn7MTwRjgIzHKgwMCnOg_EdBf4kAIWd4oE9pFJWkoMya9neo-Inrzxls9bGTy3TtlJyJg3a_y4UDvzpSrtMrYSc9qU8vrDXygK9idyYBegE3yB9rQVW79X9kKAq0oCDeZova5OtPnaJm1Z79pqGYdPTkdMIq2w91WXQhp_Jf7tXWrhA"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Vertical water projection architectural light slot" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR4Q6weCIWxXLoZ2mQ1gOVev3nupu2Dl-gT9yePz3j_a_F6Ma2ztygDcZ-emG4D9KZZzXItpCLxoVTkr0PDPU3uWtUeGyT1fr-DLgGVNiTSSlQIPj3Ge8V3nzSmOySEwVE6bvdHxq9bhfvRhP2TtgltxgdpVyhVCPwxgXjxmhKaNRuRY5VepTgNBCXHi6xwG4RzCmtLrdp53bCqYRejz7qwOEgGgl-qeHFd1Pw5p91ozQj5jSIr972u45_6PT9tfqu_A"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Courtyard glass vitrine with lush landscape and orb lights" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxnHe5UmPnAY8C3dbFJED4r6Lg0KwiE-HC2oVodvzLltsDL3z_yL7flAwO0ZFZZhdtips1JQgX99O1Eh6rN_eISaMB7buGxWtL9jrjoNoScJBAETcbOfem6PWC8Lmsu1L0DJ_HSv_F5NletRkQT91zjl3d6FZULYTg0smIhZ-NCR1HUqPJvgrXRBwqsv0GuItd3v-NB_S5kwljdvJLfrp_UX2-jbvh-eERIkRwCoX2cNaRYYRYmlYhFG7PabMKR0XymA"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Glass corner atrium garden with horizontal light aperture" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnbMcmDR9rtIGv2pTMKq-IPn5RUUXBVbCRho4jmIVI_EFYxrLDdy2wxGDjYav7wG68PikCQe88wI2o5PtFZBmugjw2UZlB51RDL8cdYWAkZ30WXprwg2lRXysDxfsE4caxID1CekSzRxfMUfzOZ107ut4enUPa2etBlUZy6ZV3B8FlnIhoGxSNY8BLyWh72y4ga1OT4nGyE72hGGZDlB91eLBsKMzLKmqMmDuNIMeoyatG6rGsqaZAJ133ICPmPoFa7Q"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Modern model house lobby with unit entryways and atrium" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkqBtt95jt_Xei2mufWoNMXP8YUkRMvXK-XyAqIPrAs6VLqjqKlcQZLtNv4KUJv_kkU7rKTxmJT_FLCurpyQn8dH0rx5QYaVz3JjqWcfG_vJ6aTyi0FEwT6mQtYzAsfbs8_5hLTkhZi5xPxJpuojwBxkDn6P6huw47i6aLAiwduzi7C-jXJ0Jhx_8rspLPoru_JFUz2Eb2O-X8xAcJCbVhiNhQTV06U4Cy3TR4dPbcsmWwtXe5o0aXdVaFa5tboRTIQ"></div></figure><figure class="mb-12"><div class="w-full bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800"><img alt="Sleek minimalist hallway with glass cube garden and ambient cove light" class="w-full h-auto block object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYcVTJPUIB86QOd4Jaua1EVsWYEHEeNClcXZ7LEyKdV7kTUqwf65S9kUZv4e8y1hyIROV4jMmR-OjeDtqfmER0FZpUceXzlULXUMWliU3nv0TyBLuGJ-y894KN9v4z8LtSGEcoL1TObW0H3BCM6vP03xRezi3sIt1q1MXzc8tJMXAm19NayPmgZcHyW_XkaVeTGuMGGny3IwbWJ__fL9FUawtjrDLx24y0apvMlSkBTzDfR_YqVNqlW5xXtJ9r9aMug"></div></figure></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900" style="width: 2560px; min-width: 2560px; max-width: 2560px;">
+</footer>
+</body></html>
+
+<!-- Archives - Architectural Editorial Split Grid (2560px) -->
+<!DOCTYPE html><html class="light stitch-anim-fade-in" lang="en" style="width: 2560px; min-width: 2560px; max-width: 2560px;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white" style="width: 2560px; min-width: 2560px; max-width: 2560px; margin: 0px auto; overflow-x: hidden;">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900" style="width: 2560px; max-width: 2560px;">
+<div class="flex justify-between items-center px-8 lg:px-16 py-6 lg:py-8 w-full max-w-[2560px] mx-auto" style="width: 100%; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-0.5" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+</div>
+</header>
+<!-- Main Content - Variant 1: Asymmetric Split Editorial Layout -->
+<main class="flex-grow w-full max-w-[2560px] mx-auto px-8 lg:px-16 pt-[120px] lg:pt-[150px] pb-[100px] flex flex-col" style="width: 2560px; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Subheader Bar / Filter Controls -->
+<div class="w-full pb-4 mb-10 border-b border-neutral-100 dark:border-neutral-800"><a href="#" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase text-neutral-800 hover:text-black dark:text-neutral-200 dark:hover:text-white transition-colors duration-200 cursor-pointer">← ALL PROJECTS (08)</a></div>
+<!-- Asymmetric Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-14 flex-grow items-start">
+<!-- Left Column: Pure Text & Architectural Documentation (Sticky, 20% width) -->
+<div class="lg:col-span-2 lg:sticky lg:top-[120px] flex flex-col lg:border-b-0 border-neutral-200 dark:border-neutral-800 pb-12 lg:pb-8 self-start">
+<!-- Project Specifications & Metadata -->
+<div class="border-t border-neutral-200 dark:border-neutral-800 pt-8 space-y-6 w-full">
+<div class="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-neutral-400">
+</div>
+<div>
+<div class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-1">의정부시 의정부동 M/H 축조공사</div>
+<div class="text-xs text-neutral-400 font-mono tracking-wider">Uijeongbu-dong — Completed 2026</div>
+</div>
+<p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Positioned adjacent to the historic garden canal, the pavilion introduces an unadorned concrete volume interrupted only by calibrated apertures that admit indirect reflected light across micro-textured mortar finishes.
+      </p>
+<div class="grid grid-cols-2 gap-4 border-t border-neutral-100 dark:border-neutral-800/80 pt-5 text-[11px]">
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">building use</span>
+<span class="text-neutral-800 dark:text-neutral-200">Model house</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">Built Area</span>
+<span class="text-neutral-800 dark:text-neutral-200">480 m² / Sub-grade Archive</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">design team</span>
+<span class="text-neutral-800 dark:text-neutral-200">S. Taniguchi Atelier</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">contractor</span>
+<span class="text-neutral-800 dark:text-neutral-200">Hiroshi Ueda</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pure Architectural Photo Stream (80% width) -->
+<div class="lg:col-span-8 flex flex-col space-y-16"><!-- Exterior Series -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Daytime Exterior Front Facade" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74kpMhFDgwlBu91xuZSK6Px5Uu6FXFl8IEnk98d2ddDSYWtjGmPXlYekmPlQKQeZfqLaJPXPewznn7gCiCUCeYJKIXFtHMDH12Jzyqy7av8aK4U_LAGTwpVy6Cf1nvPWDgWm9vLx_5jqxUZWFqlnB33hJG-T5ko1qh9zk2yslH0hPweio7-yJdVoJY_pTfE3pciX-aomRmPPxMFHJ7sgKCOcHE8QyE89g26oeYsQfq8iDVc5SQKHYAgoSsaLodaPLcw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Exterior Wide View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgnPICB9LiUGfjaQOPtRsw_VznFguf3No9ASYuiPnTIosjZnHt0tVNwIiHDqfwANL2N5W9APHhS2FM9UlM8PyWX-vH1pOY_MPPEAjGiyhWmMzB8zfdefU2D0zQplU84xrULizRw_ukZ7umYkIHkhYkMMtAHw6_WX9fwBvOl3Zd7lYiXXh7EphCqUziw1uEAGdjcCO9qKCpbbDPRlnuT-m34hcRxWbbmIK_cScFlsYe12SzI88snRVy3Kq9M0C0CP-3-g">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Corner 3/4 Perspective View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcEv2gCY2oiRh5NHzhdOXMgQiMCt1b2k6twmgopkpdCFDfR5R68MorucaIApqjNy4mRCYfGCyud4SlDpf-EZVhCz_lY8RTG2jmagpfjJqNMDSw0NXuHFworvcH5CWPGCjVGpLYFonbJ9KRz5LelSS4l_7vqAgBinE-CgXTmG1SW6vuDSJoLcz6MCO_rY4pYzGtEALiZ-rz5DA6LGxGOWvZT69vVUr9DzXC2gG2e_GH_x4rPN2Bi2QyPT2xm1ZlY_Tusw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Exterior Angle View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF6rNJ8bADymnYe23VxCs_vvgsXHn0ah0rTySYl0F99xjLPgjTpkZetuNCvwcHJ4OqCDyq9qYxlRl4ucMxl52szqS4w3yWgQQX_EpzXtQ3SS4MayuGR4A7cC8PG_w4dZRYoUjUFpAu6_lZR1A76Sgx3J-zM8qj2yA_mt95zU8I8_iHtqdTtT5hmvrkSTAGf57ddYLPxb_AO7y9Xh3bANL2JSGiq7SYnAo-WMJQI7rjxBuAu2ymOwV7Z7sbxtLXceO1wQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Facade Perspective View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDhuxN9eaK8su74Xaq_2mgSM0Xu2rm5ZMQRmweVJiy7s-IhPIo3YUDPLqnQ-nffi_talBW6DCsrhFBFXb_-1ZD3jEWGTNZugvutCyh-gOYPKYUBiavoGLCP7N1Z2qKRiMaACKe1ywcJbNIieMGEVrEyhljsXp3O7YgrSzgQ5NAJR8z6IahrVRSYh7k1eNOpJUKQ15RL_fP40v48z4UcTKTXSEJaUmfpN0n2VzhJR1z2ToAm_R7S13F-BtUGKsCeBZ5w">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Housing Gallery Entrance Staircase and Glass Lobby" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtNAyhRSj60G2Fi39kM95GV2CmCd3uvRDfXDfI1sn_7XfpzW5-2ZfgO0e8w2KD3gPlv5udeHrsEQ2g6w_mE1SXHWbz1BG390zWsc3Bp_COjkkC_WsQLh2dVL8G4k9fB_7j-7ZDL5FqlTLZR3CZtN0kCX88L3_L9wcXyZvE7fFDQnxHaJTJiOJJkQljVB5b0GqyteYvE1PD-XwomEkSVCfD3yiob1QNmDOrbw_Uz7fJjoq8Inb-XIUzf8NvTmR-yeNNsg">
+  </div>
+</figure>
+
+<!-- 2F Interior & Lobby Gallery -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Reception Counter and Lobby with Vertical Texture Wall" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVnrf3sIUIVF8Zhsbv-9v6tgUsNtI0ks70bY-q0O8OyxGg5Lz9WrG02LdKpgnMiG84ev2EZMa3qA5GePiQFHQJFQ_SqMGYC1BBswQlgAmoONCKkN9qlJ7gHnrHX9VmJrQFFdPULsUWdE7Bde5CZ55R3VvhphedN_KlxUOqTJOZpgsAceVuhuyu36vqmKhREtsusI8wYSlHqw0PSZ03KDORTbChSpKIMpQtsYJ4E8ZTJnslh7SZLrE8URqnO6DWMmC4-A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Main Model Display Atrium with Architectural Model" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPOGSlPnw9LFhLHaZteUIHKE7N8q2BdbDXSLrhXeF2g0Xwt6hcu5hUhf4jSfu2b36GtdLLKajFrqEJT0FlIMV7Bwz45qUSVPkBNDnyeiVWJcsiy86hz8SQAsGWV7gpIes5MXK0zsJtmFhOynScynB5eZMMWRG7XUAQNh0rf94OQv6fl8m_KKiyC7DyBcjYvHsEK-gdnIYpDhFBBVv-53YtLeLCLQTFrnZDVbQI9971mYTIJVWQBsb3HxYOHJuF6JQwoQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Cafeteria Service Bar" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqP0o0oFJWRJ6FlXCzipAsnXd3O1Vfextds43gXTTadred7tj4WF9-V4EID5pQUJVxOFy7WWAd_IYKdaTvkQw_jnZyr8xmY6wTHsWz-d3TM8IoYbvBLTcYwFNrd9RGlU-N2xH5U7X83yvSpmPNKsHeD9WV_i0BSeW14tIFUPHeH1HJfAwHsPtr_Yjk1KzfloM2zjWzxkMVZNq9JAtOtRk9kRzX7tFjY8Bjd0A80rq9DPeoq1xdq5YjXXIqCwQjk5NDhQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Cafeteria Lounge and Dining Area" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoKjrJ6afJu1tP4nRawyWW43gbOQunwcPRYUr82U6jygXLPvxy7TLsAluVvRCyXm47jP_3bp0Uv2iSFdLnSKXpj-LaybPkEtVwGEql3cPW2GnBlKjOiritRt86NLz9blhTNdy_j6ns0AGLM4IQwHFfb0YjHb1hIYpKHN7ofqjQHnixMZhE0vKblIvHsG95Ri54yvT-Cqz0MQ_xVo-aKQrVs_xnRtTnDRQT6XE-6szezuyuDjTH3Nf9IXvbsIspELKtWA">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Unit Plan Entrance 84A" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZ87SfzhLwYyKzh89t91tjE4cfa0Usv_cu7s10llSmEeWdO1Jl_iQ-iAodKZ1fxnQi1skJ0mfWDt04Skn5CNFlHa2XCIckMpeZm5Mns1TXSvBNXqCbXa4MjlzgsAoyYAruRVY6R7SuIFyZ5zmEWTuEYxdN0d0GOSZXy47MuF72VWXk54bMHAAm2xBSWK_caw8W4aTW9zN5Sr9LO5UIKOU-hctpryjGeHLAomQyrrKP9oe703syi5fCgkiuUnAic439Q">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Lounge Seating Planter Bench" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4pII59FjCyC8D6xkpwVuJ5muigfpRlyBzLOoH-n0uxZpxyElRwTX40iJaLLRzCOHeNbDHZehUwxM-O7pssPHsPiKkfFkCfcI4efJgyALx5LGEzOdmHE_uJQEKCtTlwrCqZ5L1nZuQHv-zZgGVeqHllwMdwD6psk9jZwACqMlTHDMWLbqa7vg2M43jP0VB4Sv1kEE9H8TGC6Pbc659YQcrvtSd_msns_sO91gwGMbOJZzhz7JA7en2cD91zEfTiWj_w">
+  </div>
+</figure>
+
+<!-- 3F Interior & Model Units -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Wide Corridor View with Model Units" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa7D1Pwop76UstenMcHTgig6vU1-0p0FCkH8mqhStbO-_kxrT6hl5rr30ig7Iv78NDX2IwTcd6RfsjFQERNpLS_UtLICHLyUnt-J7ciSVEkFC6Y1zxowYHD4o9abF3dun4Z_x4MUOmqt-Kdrc318MiwddDzsfzlDWDQnoQgbb5z9joulO6-GvAxWMCoquYVw4lTurrMcR_pGPibK79Dn4aBUo40uP95INzCNkCZ9r6rNmaaRSl81UsYUp8vDnid7eDig">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F 66OA Unit Entrance with Brushed Metal Frame" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJuggKROlb9TSe9c-hwIjusZD3eZ7vNxmUJcMqGfdO174Unt2cNlnINCF2Nnq4ca7xho5KN3K6D8ZHIr10A8XgHoNYZMJKw_omNVXNol7OBVrlu6ocCXbLuEeR3jqFEXK_IdV9n3xVaETzzw3CpLwIibDWajjJjQesF-4IY2DR2Og-n9-78Sq8b3-dCYF57JZl2X2yFXIEpQUn2auqkjdQ9lTo5EsvEvwMs9X_lAeepn-CNidqOV9b-JLEVoItueoUlQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Office A &amp; Office B Entrance Doors" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vv1NQz9W_nqsb_g915K-xp0-7t3GX-xEGEs59qbhNwQ3S7LCEWdSEH_V09Qq_oAWKcJtyHEfMwDCyfUfWEe7KIgN7LDvLfcRvKlEwPZyC4PKv6EmvY_PTgc2U3Y3dhyZtxGpLA9hhQf2UNUYjOtS00Z-ri9w2m-kkYInFQH8lq-4_sD304gnX5o__rFgCJrDPlEwjiygKnLFhrvP-1LXNz0ECigxNeIQh2g7p0wCkGuYzPjkp2l6OmNFSqy2iECKRA">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Curved Wall Walkway with Indoor Garden" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Gza9qsyuxTcm04d171JnPZHipsSgMk-gl9_BAwg8MoRzhIKF-GvJGDaJDMhKdsgkjQNjLAKQsMyDsRO2-8F0zRLds3DY6Iexy3WrQAj1g4d2Gu5SWfTO96viL--SEyg0ZGJq8olhYNW2AZ59dpO4L3Q37NaWqELzX3VPDfkSY25z1ssjpa8n-22aioKSX8G7Y1GtKUOlDEnrteXZmLrqz3RMEJqFm7JkkBZZ1Qp_UMUSOXGHmfWJJq-U7mRdpfJf7A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Indoor Garden Glazed Courtyard Enclosure" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPB4wXJvCk7iQfLDzR9EMEaL0r2SEAmmIvH9EEy0XgKuyLamIsesiE-Lvj6GXXFenP5mdKPM78u9z9v-D0ZzQaaMgNcNaVq-dYGicXw1vjZhj_i6GlCpKYCyltryw38oeYTzT5wMPDR8SklhiDQ1WkzDwtRblBoMrWeKa-aNNxnaquj-tvJxwEKzeJHg6LCFJljF2lq7P4yNnPXM05gTsWPRsfE2sMuTRr6KpMZDqsxLdwexT115bfTB0LBoe6HlpgMg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Focal Indoor Tree and Lighting Niche Between Dark Stone Columns" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8iyoU0h34OrIoslz0qf7iWuzfzJ68Z8kUYqCxNIWpzo0hmCBdAyxThT9bWVUkmC0bQHd_FcSraW4QdTjfHUHU0BDONci7DSalQSICP1N3ebCAKQ3kgNo9JaqC1CcOFQ_-MPtn8RwxjfiNnRjprWt8bvMdYbYlyuELuZQUFlcQU2bfxNI6X-bndKEtpXwQCQUpMsDgeMsCCMqQtxPGibWmcH4BrjDNe2c_IrNIVPiZ3gGWmzRTvk06HaiLGo8ctvpvuw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Vertical Luminous Water-Reflection Light Panel Feature" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnL_FqTAygsgsfmiZLYmi4EFBVbcshSnGo_GH1a_1TD3PNdFYu3eBIE9K24iid8fi2tU7LH5qEr5k_m-zOa6xKDGVDaoqr2w29eo4VqM1UDpqlSihrilCwMg-RqZdP0uW_HA_z0Ogc_QKCciGaCDJyarBLHx2jD5ayWaT4fp26u27EMapS_lgxu-Bk21rckeFopfx4zOrYeif-09tJSEqfM-2hnj7cRy7agJDKAa0PRhW7RzT4dEVF-QiE1aUgVLtFg">
+  </div>
+</figure></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900" style="width: 2560px; min-width: 2560px; max-width: 2560px;">
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="snapdom-measure-slot" aria-hidden="true" style="position: absolute; left: -99999px; top: 0px; width: 0px; height: 0px; overflow: hidden; opacity: 0; pointer-events: none; contain: size layout style;"></div></body></html>
+
+<!-- Archives - Architectural Editorial Split Grid (2560px) -->
+<!DOCTYPE html><html class="light stitch-anim-fade-in" lang="en" style="width: 2560px; min-width: 2560px; max-width: 2560px;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white" style="width: 2560px; min-width: 2560px; max-width: 2560px; margin: 0px auto; overflow-x: hidden;">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900" style="width: 2560px; max-width: 2560px;">
+<div class="flex justify-between items-center px-8 lg:px-16 py-6 lg:py-8 w-full max-w-[2560px] mx-auto" style="width: 100%; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-0.5" href="#archive-grid">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+</div>
+</header>
+<!-- Main Content - Variant 1: Asymmetric Split Editorial Layout -->
+<main class="flex-grow w-full max-w-[2560px] mx-auto px-8 lg:px-16 pt-[120px] lg:pt-[150px] pb-[100px] flex flex-col" style="width: 2560px; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Subheader Bar / Filter Controls -->
+<div class="w-full border-b border-neutral-200 dark:border-neutral-800 pb-5 mb-10">
+  <a href="#" class="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.15em] text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white uppercase">
+    ← ALL PROJECTS (08)
+  </a>
+</div>
+<!-- Asymmetric Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 flex-grow items-start" style="display: grid; grid-template-columns: 20% calc(80% - 3.5rem); gap: 3.5rem;">
+<!-- Left Column: Pure Text & Architectural Documentation (Sticky) -->
+<div class="lg:col-span-5 lg:sticky lg:top-[120px] flex flex-col lg:border-b-0 border-neutral-200 dark:border-neutral-800 pb-12 lg:pb-8 self-start" style="grid-column: span 1; width: 100%;">
+<!-- Project Specifications & Metadata -->
+<div class="border-t border-neutral-200 dark:border-neutral-800 pt-8 space-y-6 w-full">
+<div class="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-neutral-400">
+</div>
+<div>
+<div class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-1">세종시 5-1생활권 L12BL M/H</div>
+<div class="text-xs text-neutral-400 font-mono tracking-wider">Uijeongbu-dong — Completed 2026</div>
+</div>
+<p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Positioned adjacent to the historic garden canal, the pavilion introduces an unadorned concrete volume interrupted only by calibrated apertures that admit indirect reflected light across micro-textured mortar finishes.
+      </p>
+<div class="grid grid-cols-2 gap-4 border-t border-neutral-100 dark:border-neutral-800/80 pt-5 text-[11px]">
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">building use</span>
+<span class="text-neutral-800 dark:text-neutral-200">Model house</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">Built Area</span>
+<span class="text-neutral-800 dark:text-neutral-200">480 m² / Sub-grade Archive</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">design team</span>
+<span class="text-neutral-800 dark:text-neutral-200">S. Taniguchi Atelier</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">contractor</span>
+<span class="text-neutral-800 dark:text-neutral-200">Hiroshi Ueda</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pure Architectural Photo Stream -->
+<div class="lg:col-span-7 flex flex-col space-y-16" style="grid-column: span 1; width: 100%;"><figure class="space-y-3" id="project-thumbnail-1">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="ASPEN Reception &amp; Lounge hall with benches" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpW7ga_syEeBFutKKHP0MjmRu_gHLmAUrwgbb35Z_HvxTjXYIhhgRrTsP7LlGhE6uBJCTtpNvLEiGXJtI-itO4-ArzRdVh5EOVQ_m5pJeY_aRn9EVmP3JdVJjNKs_jqykMciegRboN-_v6sd6ToTUShk-dD3W5lojfSgRkHPesGPz1dcVwdD5_bErL9lDUEoy_YXOS4RxJEk-gbfm7kpFpPjwowqAL7bh53pAAR0OK5UrGSsAXe9FSVYSgHxZkzXMP1Q">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="ASPEN Consultation booths &amp; benches" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjvX3NbwfMKKKyvzGPpPv9_lEOm-lc6ilaTDJ3Fc2t0Mvw7sgjXLRFCoX1j_OWduscGCWVy62tV-Z7Ii8ksYfyM0mtFqGuwNJQ0DXnjZuMFv8-OosmiDgBq4JrEt4pAksERDiRi9U5x5TK6pRd9fquJ-nTL70pCN-QP6qP6RtZqI80AoK7SIVXGRG9OZpPmyUhSzuhNgZBfJH4OzB1dWN7MnUZKEq9adgAeMhyz304nrCDMBqnjMoiHreqlqkVKZwXXg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="ASPEN Hall wide perspective" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATz4yn0IATl5bZ4srvgGhQ2zU_XqhvO42vRQHj8FMg4Pv6p_8ti5aUhdT0Qhp6UtKON4ioUQsVGug3IvSAnreSRelIq4Q2N2PfKzLrXeZpeJwY0l913n3-QmUAqVZVLZ3KQ_GFn2guQlX5920NH7j1pDnCOcb2mFGe9ZhSPO4o2WnjHXSCGDmcOhPat_VUBczRC3gzZ6-5HFoWgfeK3ckYU7RYPgVx6D-ZYFKADC238CmN9otgONXyOkGzt4F7rvyJ3A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Cafeteria portal entrance &amp; staircase" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwBCt_d58YsKoQfBOc6ypPUKMMLAKQc2P_0Z7nvtav2GMlaoTZ8H5-iyTZnEv-MVYNeqv5XvlIDYhvRD-g1YIirDFMp_2fd5rnF3MpsWOSfpZcyeXQBgF5Wz41V5hlaeOA3fBMd3MHChk1DrALnETyvVWMV_ZneYXtRZJA8EA8T5-U8pVMwBhrXhRSP5q_5w0D3PgZqlQrMPGeq63n9BawyyU3SezzHI0X45NUMSc2rkDbuIy24BU0cuAETpA9xhGFg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Cafeteria interior counter &amp; grid ceiling" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2GNNgyd7684muEkbeGbNPgEi2Ad3jgSaHBbqFoesaamp9ml6PeoozM6xVIF_Wi1_1kgzVn_-fW10iOOIau7iGO35mnVr-E7MSfxtFGol8JMgSXs3IpM02nZxQbuPNe6Z3iz1bhIyEpdbdYaNIaV99tEY6GOPhT099aub1oRyn7a7dgVPYVwUL0cmp-9VKECLLhQ1tw6xC9vAODfHeCDWRgNePf5Rggm6Mppj0Qz1WJlg76migeWoTxm5BwWDoN-Eilw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Modern minimalist exhibition hall wide open space" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqFqq9D-AaT4YJ43DnFZ7CNfkP5mF4vFAUgby-A_emxzy99qHNS5qHxxVITSU9om-6F9O-HXpHRp1FvFicz3ZoMttxVIgeek9xt27DSpLE3fg87y7CWLL8oU2JL8LT8xE5dAQOzhX1L003Nt_cOlP0_H967bomE59wm02c_tP_oWxFjVV-mATuWQRF8K0inUsSJoZpbZQnKnwkBXegNDXByKwxu4j-qRrYsPQ1-VAazrzW1CT8ghPoOG57q1TYVc4JMQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Hallway with corner vitrine plant &amp; lighting" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdB5m2iVsk7fyv5VtUqw3UAWxk9r2iNN4ZfrjijzpCfAmTTeP3zgvDBf4fKOdrwhxRY5uF3_A3X2ZPDLB8Be-DfDGr-bfkHrivGCnk8CK0iIBRAniOlBsrltBqk8HqoxNQ40VklJSut4RA2o5rjinm-FmljA1Bcutre7HfmsEvY9Ml90-N6fYJ7BS2dwko9WKYVAO6lWbkZqDztzRaRvqOdIx3fHCymW-22Nx784q90Me_M0PRZfhzVKnaNJwEL9Qx3A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Architectural staircase with glass railing &amp; cove lighting" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXODufems-bdZOwD6TZgUxDnr-PnWJPRcXjnj6xQmtdKbcdi6Q3D7NREryHLGpGurdgZWFoZWieSWO8YoH1inLDY0t1ZL_gOiveKTjotaJQdWjbsnAFML2i7r2-691dGQYvofkbtMblFS5XG16nPdu61i9Q4OU76Ah8ioGXuLkKfucN2TxDZwQP856ST_LSPOJg3sJ4g4h4Jor1sRFyMi-_QFiAwCkX2fDx9Ashf2Uz3UYEsZuNf1Z7WvZOesd5ZK0Eg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Glass vitrine showcase garden and accent blue light slot" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqgr7AFEcL3q3V_sJI3_X7japFDzjueLptBKB16dbepnyNYLfwCUG8325xnRwUwOTLzxKrkhjDgyRfzhUbUmRrMwTpWVNIkHGBgzsLKpPABi0gMKWEdm4Jff-awMwzH1JEmBlr3VEs_HX_F-d5W3zG1WmpxeHMSzytaf0btA58HaJuEwsZZ6NY-ZOVzocBweoORwcut4BuTUl6TgfsJAZxbxxgRrtQxRed_74kmDynGB8NWa7jYzQgbLcsovsjlHtjA">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Corridor with unit numbers 410 and indoor landscaped corner" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiy-GhkcLXuXHWbJgMkSBAvOe1dloxLrRxdEwTJsRABG5np8Hx11L33JudPhSvWqHHXZMQX0VKIVZTcgRZ0i7fC5kmxhzPgHSgMAh0J8Fqz6J8zsSzM8Is8fFKj6Mn_78JouvBkGthXejTc671QDU4n-2XoZKVHlHSyM-EtOIGQGQNeEyLV5E7nxFX0x1v8PEUV_SJMj6xTA_wAQAk4iQ6fTPZwtey4AwDsFA-yF4b0Etzd6d6D8h9Da85fd4ksO80jg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Minimalist glass cube garden display corner" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSH7_50e8EBLKTkjXy_VJUjG6C_JHKlGQVkC2M4MW0m7p18fLofRCcs1xZuht2EpRBz43kJhzPO0yyHtUeoMpDrG611ofTZnKUIsdWGYJhN8cGBSNWTr7satpmInc5UqgtrC_1a98ipcaPYPgkYh8PQem7mKk9o_ZbWq7gi_WxBw-bVCRdYsFm8AxIY386BGIRiiMYNglciEvlCvnsT-HNG0opaeiI0Ui2Pi2tG5bxE9NzQbF01UVTDPZVgOCNpqzakw">
+  </div>
+</figure></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900" style="width: 2560px; min-width: 2560px; max-width: 2560px;">
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
