@@ -1,0 +1,7 @@
+{
+  "name": "ARCHIONE - Architectural Practice & Spatial Research",
+  "description": "ARCHIONE official architectural practice portfolio, projects archive, corporate dossier, and contact profile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

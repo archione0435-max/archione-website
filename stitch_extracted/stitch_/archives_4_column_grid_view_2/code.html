@@ -1,0 +1,408 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900 pt-[10px]">
+<div class="flex justify-between items-center px-10 py-8 w-full max-w-[1800px] mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-1" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">ABOUT</a>
+
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Action -->
+
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1800px] mx-auto px-10 pt-[160px] pb-[160px]">
+<!-- Page Header -->
+<div class="mb-16">
+<h1 class="font-display-xl text-display-xl text-primary">WORK </h1>
+</div>
+<!-- 4-Column Image Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full"><!-- Grid Item 1 -->
+<a href="#uijeongbu-gallery" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="의정부시 의정부동 M/H 축조공사" aria-label="의정부시 의정부동 M/H 축조공사"><img alt="의정부시 의정부동 M/H 축조공사 Entrance" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAqoiVWI3idtE08zJ71-hR1yauvtXBGw_2kyk9aSZYlKnsNeDntHYACyzXcCSbkVaRN9bXOlSMB-wQ__7iIo_InyMkPIQ5P_BH-RSPYHpCHpiky-1p_cwDEEEqNk24A5Piu4DGMkonyVHrT7FF5C-1_mEbN2m_KOEmpAIpR51wkvKUdUpgmbbK8agfaGw_BQMPInj_Mc_ZqCmJPRAG3OAoGH_8hK-q-hTVUqgKDwG1xdoXDZaAukffrQEJF8-l_rQ3dg"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">의정부시 의정부동 M/H 축조공사</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">01 / GALLERY / 2024</span></div></a>
+<!-- Grid Item 2 -->
+<a href="#sejong-aspen" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="세종시 5-1생활권 L12BL M/H" aria-label="세종시 5-1생활권 L12BL M/H"><img alt="세종시 5-1생활권 L12BL M/H ASPEN Hall" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEGAtjsOeRgbJ2XSxT_VkVZqIxyNKNisXrsdAOdxF5LN5vNDkgtw0ICkKnj5pWD5WUr5c_vivL_J8IXoCUs6AxrsR4C3uzMTHR4Xd1qAtnP2yvM8EHIQLNpmFKmQhfmrRFLN8VT_4AGYFi8oqxn-I9wdWobURCwcz50WJtqT5yrzKG2qb2Vc_7rHENp_BMVO1ggGc65InQY2blPTB8qIYdZJMNVX9wEKOz9sm-mVtq32NWuOYceIZ06SC-hzf3XDesQ"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">세종시 5-1생활권 L12BL M/H</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">02 / ASPEN GALLERY / 2024</span></div></a>
+<!-- Grid Item 3 -->
+<a href="#cheonan-dujeong" class="group relative overflow-hidden bg-surface-container-low cursor-pointer block" style="aspect-ratio: 1 / 1;" title="천안 두정동 M/H 축조공사" aria-label="천안 두정동 M/H 축조공사"><img alt="천안 두정동 M/H 축조공사" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt9EQofsAI9nE2dwkA1caGr0p62vgJQRU9PBo6NZpJcyn8pSQ9OmS8BsFF9lw-Hi9q7foYRfpXS_AfNWmKe1_5rf6Y_0gPdMiAGrSdZHyfO5AaIknBGSjUroiLb0Ly8ydTWQ9yppJ2rxkSWSyjrrj7gJZ2M9Tp44QXgF4zbzt-3KcMRi6wizcw0UdiZf9tDHzIoFz_5l-e3l5eEVVzHtaNTXCMxBx5pSLTI6n5lxnLnoGd8EpqECOHDinIf2IMjvGarA"><div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40"><span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">천안 두정동 M/H 축조공사</span><span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">03 / GALLERY / 2024</span></div></a>
+<!-- Grid Item 4 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 4" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Close up of brutalist concrete building facade showing grid patterns and raw texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 04</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Structure / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 5 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 5" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Looking up at modern glass skyscrapers converging against a clear, pale sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 05</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Urban / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 6 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 6" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist still life of a single white ceramic vase on a smooth grey surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 06</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Objects / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 7 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 7" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Interior shot of a minimalist gallery space with bare white walls and polished concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 07</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Gallery / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 8 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 8" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Abstract architectural detail of white intersecting planes bathed in stark sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 08</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Form &amp; Space / 2023</span>
+  </div>
+</div><!-- Grid Item 9 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 9" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark stone pavilion amidst serene landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 09</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Residence / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 10 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 10" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic concrete staircase bathed in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 10</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Commercial / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 11 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 11" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Geometric timber facade detail creating deep rhythmic shadow patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 11</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Cultural / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 12 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 12" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist reflection pool beside a polished graphite wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 12</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Pavilion / 2024</span>
+  </div>
+</div>
+<!-- Grid Item 13 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 13" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dark textured steel facade framing an open courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 13</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Civic / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 14 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 14" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monochromatic industrial conversion gallery interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 14</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Exhibition / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 15 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 15" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Atmospheric skylight casting diagonal beam across polished floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 15</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Museum / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 16 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 16" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark ceramic craft elements on charcoal plinth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 16</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Objects / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 17 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 17" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="High-contrast linear concrete canopy overhang" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 17</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Urban / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 18 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 18" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dramatic architectural void with soft ambient daylighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 18</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Spatial / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 19 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 19" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic stone block in modern art foundation gallery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 19</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Sculpture / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 20 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 20" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Sleek glass atrium reflecting geometric architectural angles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 20</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Atrium / 2023</span>
+  </div>
+</div>
+<!-- Grid Item 21 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 21" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Dark textured timber wall with minimalist brass accent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 21</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Interior / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 22 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 22" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Brutalist concrete monolith against twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 22</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Tower / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 23 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 23" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist living quarters overlooking calm lake waters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 23</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Residence / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 24 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 24" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monochrome stone colonnade with rhythmic natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 24</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Colonnade / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 25 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 25" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Contemporary museum wing with textured stone facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEh7JgrlIsRcvulq4w6Ny5HTaYj8Q0CMUQBswaMgbqhBNbNQjGqG5AEydNl2rM0decrCAKqbgPLN3jT1VfHfLayXvODJG0N3rm3jVW2n607wXqwJH3jB8izl_mJ0O9oFs7Egt8xuyXRgf2luJ-0ugJ3rcp8ZkhmITXDwWkXhOGH3_w3k-Rppqny20jxGurMEpBfZGdyZq4-6TuFrycCa0CiELJOtDi2EclXhXcK1VN1KRvNOjfF9L998rFlsufHaeeO97AqkNdoZQ">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 25</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Museum / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 26 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 26" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Sculptural monolithic reception desk in polished granite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrV0NDSK2NocsOkaF-j0rYnXT93KMqKNR3L5fsp2efc3fTlcGuxlIlPwiNs7OoKm5N40SRJGyMhnUv2vNFKU6bAQAdfZOsySXOnskpP3a8FgvsB74R1KYflixZ-K891q-6iErCPspZya5udQrRHUARQV8124YE_mONBdmLQOepzeuxetCZYq8EokzKfAoLXyINid2PnFDJpUAHTFT3GxLj2dvhgS0QvSZTbVjbl5jRugOJ8heTVMdL7CMQuMzeGTun8liVuk7XI0">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 26</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Workplace / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 27 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 27" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist glass corner overlooking misty mountain peak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTZzkzx_92GCJ60VDv38dU15hHY7Nvo5cc1j2B3g_U4HMR16YUMOAbbpkyw6sI29E_B2m6Vzp1wj5updhWOd2DNtS3b6DDCyEBsJYVpH-ZgPRi-TGpLxr08mL1_DCetG1A-HqkR82DAnzmjMQb56INFt-_DnIDqOxJcNJVn3GKO_vtXwE-uB3HOyEpFZ5B0_Hdlm29s9ujzfm8VXVT16_cUqtRxPWvJofaYh2wZDlsDgPpa-nkb4ynglpptNyWcEBo6zjBtngneY">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 27</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Retreat / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 28 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 28" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Textured acoustic paneling grid in modern concert hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxErYkmETS7Z30nDbb2Pd2Lnw_v_z9rQxGTZLvteLXWl7IwhhMeh3aLopwBKaZHnS23yPop_4TCC1yWVWIKb8rYAgCVNQ0LJn-dRy370_9ZwQamYK5NH0wvENdbXt7UHbXT61TjgeQdz5tCMfzFE5s6UZiLrVFiQ_YeKA3qdptwKERKYTbdg0583Z16nzE4PokdfHPWv3SG_eejRjDamFK3UkMMjKielzVIwEpeGAt4uZ1JSu1qzuH1pGxXKTGr_IBA56DooSVYUk">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 28</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Acoustics / 2022</span>
+  </div>
+</div>
+<!-- Grid Item 29 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 29" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Monolithic concrete bench in shadow garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-C0TXDEYkvIHEQ6RlP_HAET10SEcRck5M3LfHV5Hc0oqw16X_UlWnJCk5aEkAc-2zeigyrP_x9tKi33CbxEN3mUQr2t-_tKGJtjuWqHUOUQhtETpWyjSHWFN4JZxhLHtjWmVqUaj8R_pk8HR98YPbmqfLqsghV30CU4E3j_hFTGr5j99r4Kdo4efwTPQv-Ho7YdrrazY1dGG6bMKUIq51VfvfnPGqqay1fVW_E7DyPQ1BjsRnHyGKm36QV1Fbdg5IJmbm0_S5Zw">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 29</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Landscape / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 30 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 30" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Cantilevered roof structure casting geometric shadow on courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCibR4M-xmvNDpU9hg76ze2JPCZklELwLQM3jiaTQqNn5qyHBMkk4nL-dilyStLpJhuR-pby5CJdU7YQmuvAW6EUBcDWicI_WaLdDAGvfLi3NuOPZh_n34AGK3OyUeSsge9cdb9cuxORDtYL7yc7m5BrEiBadPqneuAwvHUdmW_djUO4C5Sr8pMXB160Bsj6Cq60ycAi5zmLhHzvC46I20VtH9ctsdj4-NfDBiUqfyIMf124JKUlsvlFZxaIZMxzCAF6U_yywAhgU">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 30</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Structure / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 31 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 31" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Subtle light filtering through fluted glass partition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagNj75luYWN7gG_RJ8vdvoIxluK0a6mIfLFakTmBPLfNeFFMdnsVTsqE-1V-RpzXkQq-HkL-o_LEIL-eA259_uosHQdJrUDXaA982Bd7UAeBRFM5yZaGVfn906KIAA72c9ilytAyz8ZJ_wQ0pq3rgf1x6iObFvLAbyth18Wt_eyxDrO103iX0-L1LCM_nH1rB03hwSgYsH6fplxsJYbShzWOOOcSIwRjI4wNW-J-3XcRR-uLwr5UnfdS6WRckfokxV8vb8snjMPI">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 31</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Interior / 2021</span>
+  </div>
+</div>
+<!-- Grid Item 32 -->
+<div class="group relative overflow-hidden bg-surface-container-low cursor-pointer" style="aspect-ratio: 1 / 1;">
+  <img alt="Archive Image 32" class="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-40" data-alt="Minimalist dark bronze architectural detail bathed in low grazing light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFm4Yhjwggt0Eg5JVFiQogl5W1rAe2U7b2NrW2wgW1JrmgUFUg0E0-rgk0yssRN0TY5Koo36JE07mESMTvcbdqewiQxQ_p522AFd9l5PqSu724vXjPvH9ZymbLHIlJVBAwWCewLPZjdFuPGxpjC9VFBAemKFE3_CLuIY4r1cdU9POPcNS8seGSM7cmv3SvK4RCiHHg8Y_YksBlXZ73BSeau2oPEONxg3-LE9T4tNCWpKGU5lujY75ALR3OH2kdWwFh60q9crrI2ZM">
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none p-4 text-center bg-black/40">
+    <span class="font-inter text-[13px] font-bold tracking-[0.15em] uppercase text-white mb-1">Project 32</span>
+    <span class="font-inter text-[10px] tracking-[0.15em] uppercase text-white/70">Detail / 2021</span>
+  </div>
+</div></div>
+</main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900 opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-[1800px] mx-auto">
+<!-- Copyright -->
+
+<!-- Footer Links -->
+<div class="flex space-x-8">
+
+
+
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

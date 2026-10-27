@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="light stitch-anim-fade-in" lang="en" style="width: 2560px; min-width: 2560px; max-width: 2560px;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white" style="width: 2560px; min-width: 2560px; max-width: 2560px; margin: 0px auto; overflow-x: hidden;">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900" style="width: 2560px; max-width: 2560px;">
+<div class="flex justify-between items-center px-8 lg:px-16 py-6 lg:py-8 w-full max-w-[2560px] mx-auto" style="width: 100%; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-0.5" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+</div>
+</header>
+<!-- Main Content - Variant 1: Asymmetric Split Editorial Layout -->
+<main class="flex-grow w-full max-w-[2560px] mx-auto px-8 lg:px-16 pt-[120px] lg:pt-[150px] pb-[100px] flex flex-col" style="width: 2560px; max-width: 2560px; padding-left: 80px; padding-right: 80px;">
+<!-- Subheader Bar / Filter Controls -->
+<div class="w-full pb-4 mb-10 border-b border-neutral-100 dark:border-neutral-800"><a href="#" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase text-neutral-800 hover:text-black dark:text-neutral-200 dark:hover:text-white transition-colors duration-200 cursor-pointer">← ALL PROJECTS (08)</a></div>
+<!-- Asymmetric Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-14 flex-grow items-start">
+<!-- Left Column: Pure Text & Architectural Documentation (Sticky, 20% width) -->
+<div class="lg:col-span-2 lg:sticky lg:top-[120px] flex flex-col lg:border-b-0 border-neutral-200 dark:border-neutral-800 pb-12 lg:pb-8 self-start">
+<!-- Project Specifications & Metadata -->
+<div class="border-t border-neutral-200 dark:border-neutral-800 pt-8 space-y-6 w-full">
+<div class="flex justify-between items-center text-[11px] tracking-[0.15em] uppercase text-neutral-400">
+</div>
+<div>
+<div class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-1">의정부시 의정부동 M/H 축조공사</div>
+<div class="text-xs text-neutral-400 font-mono tracking-wider">Uijeongbu-dong — Completed 2026</div>
+</div>
+<p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Positioned adjacent to the historic garden canal, the pavilion introduces an unadorned concrete volume interrupted only by calibrated apertures that admit indirect reflected light across micro-textured mortar finishes.
+      </p>
+<div class="grid grid-cols-2 gap-4 border-t border-neutral-100 dark:border-neutral-800/80 pt-5 text-[11px]">
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">building use</span>
+<span class="text-neutral-800 dark:text-neutral-200">Model house</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">Built Area</span>
+<span class="text-neutral-800 dark:text-neutral-200">480 m² / Sub-grade Archive</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">design team</span>
+<span class="text-neutral-800 dark:text-neutral-200">S. Taniguchi Atelier</span>
+</div>
+<div>
+<span class="text-neutral-400 uppercase tracking-widest text-[9px] block mb-1 font-mono">contractor</span>
+<span class="text-neutral-800 dark:text-neutral-200">Hiroshi Ueda</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pure Architectural Photo Stream (80% width) -->
+<div class="lg:col-span-8 flex flex-col space-y-16"><!-- Exterior Series -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Daytime Exterior Front Facade" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74kpMhFDgwlBu91xuZSK6Px5Uu6FXFl8IEnk98d2ddDSYWtjGmPXlYekmPlQKQeZfqLaJPXPewznn7gCiCUCeYJKIXFtHMDH12Jzyqy7av8aK4U_LAGTwpVy6Cf1nvPWDgWm9vLx_5jqxUZWFqlnB33hJG-T5ko1qh9zk2yslH0hPweio7-yJdVoJY_pTfE3pciX-aomRmPPxMFHJ7sgKCOcHE8QyE89g26oeYsQfq8iDVc5SQKHYAgoSsaLodaPLcw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Exterior Wide View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgnPICB9LiUGfjaQOPtRsw_VznFguf3No9ASYuiPnTIosjZnHt0tVNwIiHDqfwANL2N5W9APHhS2FM9UlM8PyWX-vH1pOY_MPPEAjGiyhWmMzB8zfdefU2D0zQplU84xrULizRw_ukZ7umYkIHkhYkMMtAHw6_WX9fwBvOl3Zd7lYiXXh7EphCqUziw1uEAGdjcCO9qKCpbbDPRlnuT-m34hcRxWbbmIK_cScFlsYe12SzI88snRVy3Kq9M0C0CP-3-g">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Corner 3/4 Perspective View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcEv2gCY2oiRh5NHzhdOXMgQiMCt1b2k6twmgopkpdCFDfR5R68MorucaIApqjNy4mRCYfGCyud4SlDpf-EZVhCz_lY8RTG2jmagpfjJqNMDSw0NXuHFworvcH5CWPGCjVGpLYFonbJ9KRz5LelSS4l_7vqAgBinE-CgXTmG1SW6vuDSJoLcz6MCO_rY4pYzGtEALiZ-rz5DA6LGxGOWvZT69vVUr9DzXC2gG2e_GH_x4rPN2Bi2QyPT2xm1ZlY_Tusw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Exterior Angle View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF6rNJ8bADymnYe23VxCs_vvgsXHn0ah0rTySYl0F99xjLPgjTpkZetuNCvwcHJ4OqCDyq9qYxlRl4ucMxl52szqS4w3yWgQQX_EpzXtQ3SS4MayuGR4A7cC8PG_w4dZRYoUjUFpAu6_lZR1A76Sgx3J-zM8qj2yA_mt95zU8I8_iHtqdTtT5hmvrkSTAGf57ddYLPxb_AO7y9Xh3bANL2JSGiq7SYnAo-WMJQI7rjxBuAu2ymOwV7Z7sbxtLXceO1wQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Night Facade Perspective View" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDhuxN9eaK8su74Xaq_2mgSM0Xu2rm5ZMQRmweVJiy7s-IhPIo3YUDPLqnQ-nffi_talBW6DCsrhFBFXb_-1ZD3jEWGTNZugvutCyh-gOYPKYUBiavoGLCP7N1Z2qKRiMaACKe1ywcJbNIieMGEVrEyhljsXp3O7YgrSzgQ5NAJR8z6IahrVRSYh7k1eNOpJUKQ15RL_fP40v48z4UcTKTXSEJaUmfpN0n2VzhJR1z2ToAm_R7S13F-BtUGKsCeBZ5w">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="의정부동 M/H - Housing Gallery Entrance Staircase and Glass Lobby" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtNAyhRSj60G2Fi39kM95GV2CmCd3uvRDfXDfI1sn_7XfpzW5-2ZfgO0e8w2KD3gPlv5udeHrsEQ2g6w_mE1SXHWbz1BG390zWsc3Bp_COjkkC_WsQLh2dVL8G4k9fB_7j-7ZDL5FqlTLZR3CZtN0kCX88L3_L9wcXyZvE7fFDQnxHaJTJiOJJkQljVB5b0GqyteYvE1PD-XwomEkSVCfD3yiob1QNmDOrbw_Uz7fJjoq8Inb-XIUzf8NvTmR-yeNNsg">
+  </div>
+</figure>
+
+<!-- 2F Interior & Lobby Gallery -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Reception Counter and Lobby with Vertical Texture Wall" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVnrf3sIUIVF8Zhsbv-9v6tgUsNtI0ks70bY-q0O8OyxGg5Lz9WrG02LdKpgnMiG84ev2EZMa3qA5GePiQFHQJFQ_SqMGYC1BBswQlgAmoONCKkN9qlJ7gHnrHX9VmJrQFFdPULsUWdE7Bde5CZ55R3VvhphedN_KlxUOqTJOZpgsAceVuhuyu36vqmKhREtsusI8wYSlHqw0PSZ03KDORTbChSpKIMpQtsYJ4E8ZTJnslh7SZLrE8URqnO6DWMmC4-A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Main Model Display Atrium with Architectural Model" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPOGSlPnw9LFhLHaZteUIHKE7N8q2BdbDXSLrhXeF2g0Xwt6hcu5hUhf4jSfu2b36GtdLLKajFrqEJT0FlIMV7Bwz45qUSVPkBNDnyeiVWJcsiy86hz8SQAsGWV7gpIes5MXK0zsJtmFhOynScynB5eZMMWRG7XUAQNh0rf94OQv6fl8m_KKiyC7DyBcjYvHsEK-gdnIYpDhFBBVv-53YtLeLCLQTFrnZDVbQI9971mYTIJVWQBsb3HxYOHJuF6JQwoQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Cafeteria Service Bar" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqP0o0oFJWRJ6FlXCzipAsnXd3O1Vfextds43gXTTadred7tj4WF9-V4EID5pQUJVxOFy7WWAd_IYKdaTvkQw_jnZyr8xmY6wTHsWz-d3TM8IoYbvBLTcYwFNrd9RGlU-N2xH5U7X83yvSpmPNKsHeD9WV_i0BSeW14tIFUPHeH1HJfAwHsPtr_Yjk1KzfloM2zjWzxkMVZNq9JAtOtRk9kRzX7tFjY8Bjd0A80rq9DPeoq1xdq5YjXXIqCwQjk5NDhQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Cafeteria Lounge and Dining Area" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoKjrJ6afJu1tP4nRawyWW43gbOQunwcPRYUr82U6jygXLPvxy7TLsAluVvRCyXm47jP_3bp0Uv2iSFdLnSKXpj-LaybPkEtVwGEql3cPW2GnBlKjOiritRt86NLz9blhTNdy_j6ns0AGLM4IQwHFfb0YjHb1hIYpKHN7ofqjQHnixMZhE0vKblIvHsG95Ri54yvT-Cqz0MQ_xVo-aKQrVs_xnRtTnDRQT6XE-6szezuyuDjTH3Nf9IXvbsIspELKtWA">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Unit Plan Entrance 84A" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZ87SfzhLwYyKzh89t91tjE4cfa0Usv_cu7s10llSmEeWdO1Jl_iQ-iAodKZ1fxnQi1skJ0mfWDt04Skn5CNFlHa2XCIckMpeZm5Mns1TXSvBNXqCbXa4MjlzgsAoyYAruRVY6R7SuIFyZ5zmEWTuEYxdN0d0GOSZXy47MuF72VWXk54bMHAAm2xBSWK_caw8W4aTW9zN5Sr9LO5UIKOU-hctpryjGeHLAomQyrrKP9oe703syi5fCgkiuUnAic439Q">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="2F Lounge Seating Planter Bench" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4pII59FjCyC8D6xkpwVuJ5muigfpRlyBzLOoH-n0uxZpxyElRwTX40iJaLLRzCOHeNbDHZehUwxM-O7pssPHsPiKkfFkCfcI4efJgyALx5LGEzOdmHE_uJQEKCtTlwrCqZ5L1nZuQHv-zZgGVeqHllwMdwD6psk9jZwACqMlTHDMWLbqa7vg2M43jP0VB4Sv1kEE9H8TGC6Pbc659YQcrvtSd_msns_sO91gwGMbOJZzhz7JA7en2cD91zEfTiWj_w">
+  </div>
+</figure>
+
+<!-- 3F Interior & Model Units -->
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Wide Corridor View with Model Units" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa7D1Pwop76UstenMcHTgig6vU1-0p0FCkH8mqhStbO-_kxrT6hl5rr30ig7Iv78NDX2IwTcd6RfsjFQERNpLS_UtLICHLyUnt-J7ciSVEkFC6Y1zxowYHD4o9abF3dun4Z_x4MUOmqt-Kdrc318MiwddDzsfzlDWDQnoQgbb5z9joulO6-GvAxWMCoquYVw4lTurrMcR_pGPibK79Dn4aBUo40uP95INzCNkCZ9r6rNmaaRSl81UsYUp8vDnid7eDig">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F 66OA Unit Entrance with Brushed Metal Frame" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJuggKROlb9TSe9c-hwIjusZD3eZ7vNxmUJcMqGfdO174Unt2cNlnINCF2Nnq4ca7xho5KN3K6D8ZHIr10A8XgHoNYZMJKw_omNVXNol7OBVrlu6ocCXbLuEeR3jqFEXK_IdV9n3xVaETzzw3CpLwIibDWajjJjQesF-4IY2DR2Og-n9-78Sq8b3-dCYF57JZl2X2yFXIEpQUn2auqkjdQ9lTo5EsvEvwMs9X_lAeepn-CNidqOV9b-JLEVoItueoUlQ">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Office A &amp; Office B Entrance Doors" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vv1NQz9W_nqsb_g915K-xp0-7t3GX-xEGEs59qbhNwQ3S7LCEWdSEH_V09Qq_oAWKcJtyHEfMwDCyfUfWEe7KIgN7LDvLfcRvKlEwPZyC4PKv6EmvY_PTgc2U3Y3dhyZtxGpLA9hhQf2UNUYjOtS00Z-ri9w2m-kkYInFQH8lq-4_sD304gnX5o__rFgCJrDPlEwjiygKnLFhrvP-1LXNz0ECigxNeIQh2g7p0wCkGuYzPjkp2l6OmNFSqy2iECKRA">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Curved Wall Walkway with Indoor Garden" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Gza9qsyuxTcm04d171JnPZHipsSgMk-gl9_BAwg8MoRzhIKF-GvJGDaJDMhKdsgkjQNjLAKQsMyDsRO2-8F0zRLds3DY6Iexy3WrQAj1g4d2Gu5SWfTO96viL--SEyg0ZGJq8olhYNW2AZ59dpO4L3Q37NaWqELzX3VPDfkSY25z1ssjpa8n-22aioKSX8G7Y1GtKUOlDEnrteXZmLrqz3RMEJqFm7JkkBZZ1Qp_UMUSOXGHmfWJJq-U7mRdpfJf7A">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Indoor Garden Glazed Courtyard Enclosure" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPB4wXJvCk7iQfLDzR9EMEaL0r2SEAmmIvH9EEy0XgKuyLamIsesiE-Lvj6GXXFenP5mdKPM78u9z9v-D0ZzQaaMgNcNaVq-dYGicXw1vjZhj_i6GlCpKYCyltryw38oeYTzT5wMPDR8SklhiDQ1WkzDwtRblBoMrWeKa-aNNxnaquj-tvJxwEKzeJHg6LCFJljF2lq7P4yNnPXM05gTsWPRsfE2sMuTRr6KpMZDqsxLdwexT115bfTB0LBoe6HlpgMg">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="3F Focal Indoor Tree and Lighting Niche Between Dark Stone Columns" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8iyoU0h34OrIoslz0qf7iWuzfzJ68Z8kUYqCxNIWpzo0hmCBdAyxThT9bWVUkmC0bQHd_FcSraW4QdTjfHUHU0BDONci7DSalQSICP1N3ebCAKQ3kgNo9JaqC1CcOFQ_-MPtn8RwxjfiNnRjprWt8bvMdYbYlyuELuZQUFlcQU2bfxNI6X-bndKEtpXwQCQUpMsDgeMsCCMqQtxPGibWmcH4BrjDNe2c_IrNIVPiZ3gGWmzRTvk06HaiLGo8ctvpvuw">
+  </div>
+</figure>
+
+<figure class="space-y-3">
+  <div class="w-full aspect-[16/10] bg-neutral-100 dark:bg-neutral-900 overflow-hidden border border-neutral-200/70 dark:border-neutral-800">
+    <img alt="Vertical Luminous Water-Reflection Light Panel Feature" class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnL_FqTAygsgsfmiZLYmi4EFBVbcshSnGo_GH1a_1TD3PNdFYu3eBIE9K24iid8fi2tU7LH5qEr5k_m-zOa6xKDGVDaoqr2w29eo4VqM1UDpqlSihrilCwMg-RqZdP0uW_HA_z0Ogc_QKCciGaCDJyarBLHx2jD5ayWaT4fp26u27EMapS_lgxu-Bk21rckeFopfx4zOrYeif-09tJSEqfM-2hnj7cRy7agJDKAa0PRhW7RzT4dEVF-QiE1aUgVLtFg">
+  </div>
+</figure></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900" style="width: 2560px; min-width: 2560px; max-width: 2560px;">
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="snapdom-measure-slot" aria-hidden="true" style="position: absolute; left: -99999px; top: 0px; width: 0px; height: 0px; overflow: hidden; opacity: 0; pointer-events: none; contain: size layout style;"></div></body></html>

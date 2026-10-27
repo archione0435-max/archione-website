@@ -1,0 +1,484 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Archive - Archives</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  body, input, textarea, select, button, .font-sans, .font-body-lg {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+    letter-spacing: -0.02em;
+  }
+  .font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#636262",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "secondary-container": "#e1dfdf",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#838484"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "edge-margin": "40px",
+                        "row-padding": "4px",
+                        "container-max": "1800px",
+                        "section-gap": "160px",
+                        "element-gap": "12px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-micro": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "display-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-micro": ["10px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e2e2; }
+        ::-webkit-scrollbar-thumb:hover { background: #c6c6c6; }
+    </style>
+<meta content="web_standard" name="shell-type"></head>
+<body class="bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 font-body-lg text-body-lg min-h-screen flex flex-col relative selection:bg-neutral-900 selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-black transition-all duration-300 ease-in-out border-b border-neutral-100 dark:border-neutral-900 pt-[10px]">
+<div class="flex justify-between items-center px-10 py-8 w-full max-w-[1800px] mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100 hover:opacity-70 transition-opacity duration-300" href="#">ARCHIONE</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Work
+                </a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-bold text-neutral-900 dark:text-neutral-100 border-b border-neutral-900 dark:border-neutral-100 pb-1 inline-block transition-opacity duration-300" href="#">ABOUT</a>
+<a class="font-inter text-[11px] uppercase tracking-[0.15em] font-medium text-neutral-400 dark:text-neutral-500 hover:opacity-70 transition-opacity duration-300" href="#">
+                    Contact
+                </a>
+</nav>
+<!-- Trailing Action -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1800px] mx-auto px-10 pt-[160px] pb-[160px]"><div class="flex flex-col w-full">
+<!-- Quick Jump Anchors Bar -->
+<div class="w-full bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 py-4 px-10 mb-16 overflow-x-auto">
+<div class="max-w-[2560px] mx-auto flex items-center justify-between text-xs tracking-[0.2em] uppercase font-mono text-neutral-500">
+<div class="flex items-center space-x-12 whitespace-nowrap">
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#overview">01 / Overview &amp; Ethos</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#ceo">02 / CEO Message</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#history">03 / Track Record</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#certificates">04 / Certificates</a>
+
+</div>
+
+</div>
+</div>
+<!-- Main Dossier Content Container (Ultra-wide 2560px max width constraint) -->
+<div class="w-full max-w-[2560px] mx-auto px-10 flex flex-col space-y-[160px]">
+<!-- SECTION 01 / STUDIO ETHOS & OVERVIEW -->
+<section class="flex flex-col w-full pt-10" id="overview">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">01 / Overview</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Philosophy Text Column -->
+<div class="lg:col-span-7 flex flex-col space-y-8">
+<h1 class="text-4xl lg:text-6xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 leading-[1.15]">" We make better space! "</h1>
+<div class="space-y-6 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
+<p class="">각 분야의 전문가들이 만들어내는 완벽한 조화의 크리에이티브 시너지</p><div class="">각자의 전문분야에서 쌓아온 노하우와</div><div class="">다른 분야에 대한 공감대가 빚어내는 아키원만의 크리에이티브 시너지</div><p class=""></p>
+
+</div>
+<!-- 4 Core Trust Metrics Bento Row -->
+
+</div>
+<!-- Corporate Ledger Table Column -->
+<div class="lg:col-span-5 bg-neutral-50 dark:bg-neutral-900 p-10 rounded-2xl flex flex-col space-y-6">
+
+<div class="space-y-4 text-sm font-mono">
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Legal Name</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">ARCHIONE Corp. (주식회사 아키원)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Representative CEO</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">Gwi deok, Kim (김귀덕)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Establishment Date</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium">March 31, 2008</span>
+</div>
+<div class="flex justify-between py-3 border-b border-neutral-200/50 dark:border-neutral-800/50">
+<span class="text-neutral-400">Official Licenses</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium text-right">실내건축공사업 11,585,506천원 (2026년 기준)<br>금속창호공사업 1,068,406천원 (2026년 기준)</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-neutral-400">Headquarters</span>
+<span class="text-neutral-900 dark:text-neutral-100 font-medium text-right">전남광주 북구 첨단과기로 208번길 43-22.<br>와이어스파크 A동 901호</span>
+</div>
+</div>
+<div class="pt-4">
+<div class="w-full h-48 bg-cover bg-center rounded-lg grayscale contrast-125" data-alt="Minimalist architectural office interior in Gangnam Seoul featuring exposed concrete walls, large format glass tables, architectural models under precision spotlight, and quiet sophisticated atmosphere." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC-8A0GgPAxC1QFZSa9Yb1wFMdhJ2PUFOcqfJoE54FR5apBw6K_Kqie3zfyQ9Uki6MT0pilbaTBFzCqxYc7pdO5rE5qcdrCZh4UDkiM_9kLCLfjMmpcK-K2Pr3tnwu68buFT3gJfBwTfbuBMNo-tqaq7FSoMVcP7eMKmuT9hhKf_7T8CVHF3KU9Xt5Ok-q6DeO8dDGBtCAwE0UbGDFY8aB3g3G8BSLdipgBo95Y2J3n0LJ1RABPyzxj&quot;);"></div>
+</div>
+</div>
+</div><div class="mt-16 pt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col space-y-12"><div class="flex flex-col md:flex-row md:items-end justify-between gap-4"><div><span class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 block mb-1">Organization &amp; Practice Hierarchy</span><h2 class="text-2xl lg:text-3xl font-light tracking-tight text-neutral-900 dark:text-neutral-100">조직도 (Organization Structure)</h2></div></div><div class="flex flex-col items-center w-full max-w-5xl mx-auto space-y-4"><div class="px-8 py-3 rounded-full border border-neutral-900 dark:border-neutral-100 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-center shadow-sm"><span class="text-xs font-mono tracking-[0.2em] uppercase block opacity-70">Top Leadership</span><span class="text-sm font-semibold tracking-wide">대표이사 (CEO)</span></div><div class="w-[1px] h-6 bg-neutral-300 dark:bg-neutral-700"></div><div class="px-8 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 text-center"><span class="text-xs font-mono tracking-[0.15em] uppercase block text-neutral-400">Executive Board</span><span class="text-sm font-medium">임원 (Executives)</span></div><div class="w-[1px] h-8 bg-neutral-300 dark:bg-neutral-700"></div><div class="w-full grid grid-cols-1 md:grid-cols-5 gap-4 pt-2"><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 01</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">기술부</h3><span class="text-[11px] font-mono text-neutral-400">Engineering &amp; Tech</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">공사 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">안전 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">자재 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">디스플레이</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">SIGN</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 02</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">관리부</h3><span class="text-[11px] font-mono text-neutral-400">Administration</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">인사 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">자금 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">총무 관리</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 03</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">공무부</h3><span class="text-[11px] font-mono text-neutral-400">Operations</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">견적 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">계약 관리</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">업체 관리</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 04</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">공사부</h3><span class="text-[11px] font-mono text-neutral-400">Construction</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">시공</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">A / S</span></li></ul></div><div class="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 flex flex-col justify-between space-y-4"><div class="border-b border-neutral-200 dark:border-neutral-800 pb-3"><span class="text-[10px] font-mono text-neutral-400 block tracking-widest uppercase">DIV 05</span><h3 class="text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-1">설계부</h3><span class="text-[11px] font-mono text-neutral-400">Design Studio</span></div><ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono"><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">디자인 기획</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">기본 설계</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">실시 설계</span></li><li class="flex items-center space-x-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span><span class="">준공 설계</span></li></ul></div></div></div></div>
+</section>
+<!-- SECTION 02 / CEO MESSAGE -->
+<section class="flex flex-col w-full" id="ceo">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">02 / Leadership</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="bg-neutral-50 dark:bg-neutral-900 p-12 lg:p-20 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative overflow-hidden"><div class="lg:col-span-5 space-y-6 flex flex-col justify-between h-full">
+  <div class="space-y-6">
+    <span class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 block">CEO Message</span>
+    <h2 class="text-3xl lg:text-5xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 leading-[1.2]">
+      "Innovation is Every Detail.<br>Value in Every Space."
+    </h2>
+  </div>
+</div>
+<div class="lg:col-span-7 flex flex-col justify-between space-y-8 text-neutral-600 dark:text-neutral-400 text-base lg:text-lg leading-relaxed relative">
+  <div class="space-y-6">
+    <p class="font-medium text-neutral-900 dark:text-neutral-100">
+      주식회사 아키원을 찾아주셔서 진심으로 감사 드립니다.
+    </p>
+    <p class="leading-relaxed">
+      저희 주식회사 아키원은 끊임 없는 기술에 대한 고민과 투자를 통해 환경 친화적인 기술력을 발휘하고 아이디어를 발굴하여 최고의 품질과 서비스로 더 높은 건설가치, 더 높은 고객가치를 무엇보다 중시합니다.
+    </p>
+    <p class="leading-relaxed">
+      축적된 경험과 노하우를 바탕으로 신뢰 받는 건설기업이 되고자 최선을 다할 것이며, 진취적이고 창의적인 자세로 더 나은 삶의 가치를 추구하는 건설산업을 이루고자 노력하고 또 노력 하겠습니다.
+    </p>
+    <div class="space-y-2 pt-2">
+      <p class="">많은 성원 부탁 드립니다.</p>
+      <p class="">감사합니다.</p>
+    </div>
+  </div>
+  <div class="pt-8 flex justify-end items-center border-t border-neutral-200/60 dark:border-neutral-800/60">
+    <div class="text-right flex items-center space-x-4">
+      
+      <span class="text-sm font-medium tracking-wide text-neutral-900 dark:text-neutral-100 uppercase">CEO KIM GWI DEOK</span>
+    </div>
+  </div>
+</div></div>
+</section>
+<!-- SECTION 03 / FORTELINE HISTORY -->
+<section class="flex flex-col w-full" id="history"><div class="flex items-center space-x-4 mb-8"><span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">03 / Track Record</span><div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div></div><div class="mb-8"><h2 class="text-2xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 mb-2">연간 공사 실적 (Annual Construction Performance)</h2><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-neutral-400 font-mono gap-2"><span class="">2022 — 2026 주요 관공서 및 대형 건설사 협력 시공·설계 실적 총괄</span><div class="flex items-center space-x-4"><span class="inline-flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-neutral-900 dark:bg-neutral-100"></span><span class="">진행중 (In Progress)</span></span><span class="inline-flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full border border-neutral-400"></span><span class="">준공 (Completed)</span></span></div></div></div><div class="w-full bg-white dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800/60 rounded-xl overflow-hidden"><div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead class="border-b border-neutral-200 dark:border-neutral-800 text-[11px] font-mono tracking-wider text-neutral-400 uppercase bg-neutral-50/50 dark:bg-neutral-900/50"><tr><th class="py-3.5 px-6 font-medium w-36">연도 (YEAR)</th><th class="py-3.5 px-6 font-medium">발주처 및 현장명 (CLIENT &amp; PROJECT TITLE)</th><th class="py-3.5 px-6 font-medium text-right w-52">공사금액 (CONTRACT VALUE)</th><th class="py-3.5 px-6 font-medium text-center w-36">진행상황 (STATUS)</th></tr></thead><tbody class="divide-y divide-neutral-200/60 dark:divide-neutral-800/60 text-xs font-mono"><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="7"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2026</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">7 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">태영종합건설-정석 제2공장 대회의장 무대장치 &amp; 강당조성공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,014,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-과천주암C-2BL 공동주택 건설공사 2공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩10,980,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광주시광산구-산정근린공원 안전하고 쾌적한 화장실 개선사업</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩63,432,200</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-용인고림지구 H5블럭 공동주택 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩999,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-남양주왕숙 A-1BL 아파트 건설공사 1공구 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,590,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-율포 해양복합센터 건립 건축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,180,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">울산다운 2 A-10BL 아파트 건설공사 8공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,700,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="6"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2025</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">6 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">LH토지주택공사-2024년 작은도서관 시설물 개선공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩182,316,460</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설-순천시신청사 내장공사 및 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩7,239,844,216</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우 부산진구 견본주택 리모델링 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩152,900,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-마륵동 연화지역주택조합 아파트 내장공사 및 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,305,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">의정부동 지역주택조합 모델하우스 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,597,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">의정부동 지역주택조합 아파트 단위세대 설계용역</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩59,840,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="12"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2024</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">11 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">인동종합건설- 인공지능 중심 산업융합 집적단지 공간건축 신축공사(잔여분) 중 실내건축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,861,716,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">영무건설-군산 커뮤니티 인테리어 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩480,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우종합건설-괴산 미니복합타운 A-1BL 및 진천문백 아파트 건설공사 1공구 공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,628,098,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 과천지식정보타운 아파트 건설공사 1공구 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,366,800,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900">진행중</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">용인 동천역 트리너스 아파트 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,002,652,700</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광주시도시공사-인공지능 DS동 부분준공 수장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩291,948,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설 –전남대 생활관 중 내장,목창호공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩109,839,073</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">금호건설-전남대 생활관 내장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,034,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-세종시 5-1생활권 L12BL 견본주택 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,882,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">광문개발-천안두정동 1281번지 양우모델하우스 리모델링공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,314,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-여수 신기동39번지 단위세대 설계용역</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩24,200,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대광건영-내포신도시 RH4-2블록 공동주택 신축공사 중 경량천정공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩295,020,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="6"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2023</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">6 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">도원건설 -순천신대도서관 건립사업 중 인테리어공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩678,150,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">현용홀딩스 -광천동 주상복합 모델하우스 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,956,900,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">동광건설-죽전 테라스앤 139 동광뷰 웰 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩4,496,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-21-육-○○부대 시설공사 중 내장 및 수장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,308,934,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-태백장성 아파트 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,008,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-태백장성 SOC 복합시설 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,341,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="border-t-2 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-bold text-base align-top" rowspan="9"><div class="sticky top-24"><div class="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">2022</div><div class="text-[10px] text-neutral-400 font-mono tracking-wider uppercase mt-0.5">9 PROJECTS</div></div></td><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설- 용인고림 양우내안애 아파트 신축공사 중 내장목공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩3,247,400,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설-파주연풍리 지역주택조합 양우내안애 아파트 신축 중 내장공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩2,049,358,890</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">한국토지주택공사-LH 평택 고덕 견본주택 개보수공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩510,527,230</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대방건설 광주 수완7차 모델하우스 축조공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩809,196,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 완주이서 지역주택조합 공동주택 신축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,766,049,320</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">서영대학교 사회맞춤형사업 파티시에마스터반 실습실 여건개선공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩49,316,630</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">대한법률구조공단 광주 지부 피해자 국선전담변호사 사무실 구축공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩16,500,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">양우건설 천안 두정동 1465번지 공동주택 모델하우스 건립공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩1,730,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr><tr class="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors"><td class="py-4 px-6 text-neutral-900 dark:text-neutral-100 font-sans font-normal text-sm">연산홀딩스-거제시 사동면 성포리 견복주택 공사</td><td class="py-4 px-6 text-right font-mono font-medium text-neutral-900 dark:text-neutral-100">₩506,000,000</td><td class="py-4 px-6 text-center"><span class="inline-block px-2.5 py-1 text-[11px] rounded font-mono font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400">준공</span></td></tr></tbody></table></div></div></section>
+<!-- SECTION 04 / CERTIFICATES & OFFICIAL LICENSES (A4 Dossier Viewer) -->
+<section class="flex flex-col w-full" id="certificates">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-xs font-mono tracking-[0.3em] text-neutral-400 uppercase">04 / Credentials</span>
+<div class="h-[1px] bg-neutral-200 dark:bg-neutral-800 flex-grow"></div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+<div>
+<h2 class="text-3xl lg:text-4xl font-light tracking-tight text-neutral-900 dark:text-neutral-100">
+                        Certificates &amp; Official Licenses
+                    </h2>
+<p class="text-neutral-500 text-base mt-2">Verified government and institutional accreditations (A4 Vertical Standard)</p>
+</div>
+<div class="mt-4 md:mt-0 font-mono text-xs text-neutral-400">
+                    TOTAL 6 VERIFIED DOCUMENTS / 2024 REVISION
+                </div>
+</div>
+<!-- A4 Card Grid (Aspect ratio ~ 1:1.414) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Certificate 1 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. 2014-0415</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<!-- A4 Box Representation -->
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">architecture</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">CERTIFICATE OF REGISTRATION</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Interior Architecture Construction License (실내건축공사업 면허)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">MINISTRY OF LAND, INFRASTRUCTURE AND TRANSPORT</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Interior Architecture Construction License</h3>
+<p class="text-sm text-neutral-500">Official license for executing high-end commercial and public interior structures.</p>
+</div>
+</div>
+<!-- Certificate 2 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. SEOUL-2016-089</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">domain</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">PRACTICE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Architectural Practice Registration Certificate (건축사사무소 개설신고필증)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA INSTITUTE OF ARCHITECTS</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Architectural Practice Registration</h3>
+<p class="text-sm text-neutral-500">Certified architectural design and supervision practicing entity.</p>
+</div>
+</div>
+<!-- Certificate 3 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">REG. NO. 2020-11024</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">science</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">R&amp;D INSTITUTE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Corporate Research Institute (기업부설연구소 인정서)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA INDUSTRIAL TECHNOLOGY ASSOCIATION</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">R&amp;D Corporate Research Institute</h3>
+<p class="text-sm text-neutral-500">Accredited research lab for sustainable spatial materials and technology.</p>
+</div>
+</div>
+<!-- Certificate 4 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">ISO 9001 / 14001</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">QUALITY &amp; ENVIRONMENT</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">ISO 9001 &amp; ISO 14001 Certification (품질 및 환경경영시스템)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">INTERNATIONAL ORGANIZATION FOR STANDARDIZATION</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">ISO 9001 / ISO 14001 Quality</h3>
+<p class="text-sm text-neutral-500">Global standard for quality management and environmental responsibility.</p>
+</div>
+</div>
+<!-- Certificate 5 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">CREDIT RATING: A0</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">trending_up</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">CREDIT RATING CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Corporate Credit Rating (기업신용평가등급 A0)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA ENTERPRISE DATA</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Corporate Credit Rating (A0)</h3>
+<p class="text-sm text-neutral-500">High financial stability and operational trustworthiness verified annually.</p>
+</div>
+</div>
+<!-- Certificate 6 -->
+<div class="bg-neutral-50 dark:bg-neutral-900 p-8 rounded-xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 group">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-mono text-neutral-400">SYNDICATE NO. 884-2024</span>
+<span class="material-symbols-outlined text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">verified</span>
+</div>
+<div class="w-full aspect-[1/1.414] bg-white dark:bg-neutral-950 p-6 rounded shadow-sm flex flex-col justify-between relative overflow-hidden mb-6 border border-neutral-200 dark:border-neutral-800">
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="text-8xl font-black font-mono">ARCHIONE</span>
+</div>
+<div class="space-y-3 relative z-10">
+<div class="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-900 mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-xl">shield</span>
+</div>
+<div class="text-center font-serif text-sm tracking-widest text-neutral-800 dark:text-neutral-200">GUARANTEE CERTIFICATE</div>
+<div class="w-8 h-[1px] bg-neutral-300 mx-auto"></div>
+<p class="text-[10px] text-center font-mono text-neutral-500">Construction Guarantee Syndicate (건설공제조합 시공보증서)</p>
+</div>
+<div class="text-center relative z-10">
+<div class="text-[9px] font-mono text-neutral-400">KOREA CONSTRUCTION GUARANTEE CO.</div>
+<div class="w-16 h-4 bg-red-600/20 rounded mx-auto mt-2 flex items-center justify-center">
+<span class="text-[8px] font-bold text-red-600">OFFICIAL SEAL</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-neutral-900 dark:text-neutral-100 text-lg mb-1">Construction Guarantee Syndicate</h3>
+<p class="text-sm text-neutral-500">Guaranteed completion and bonding capacity for institutional projects.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05 / OFFICIAL DOSSIER DOWNLOAD & RFP -->
+
+</div>
+</div></main>
+<!-- Footer from JSON -->
+<footer class="fixed bottom-0 w-full z-40 bg-white dark:bg-black border-t border-neutral-100 dark:border-neutral-900 opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-[1800px] mx-auto">
+<!-- Copyright -->
+<!-- Footer Links -->
+<div class="flex space-x-8">
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
